@@ -1,9 +1,25 @@
+import Navbar from "./components/Navbar";
+import BackgroundFX from "./components/BackgroundFX";
+import Home from "./sections/Home";
+import { lazy, Suspense } from "react";
+
+const About = lazy(() => import("./sections/About"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Contact = lazy(() => import("./sections/Contact"));
+
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
-      <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-        Hello Tailwind v3 + Vite + React 🚀
-      </h1>
+    <div className="font-sans">
+      <BackgroundFX />
+      <Navbar />
+      <Home />
+      
+      {/* Lazy load sekcija */}
+      <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
+        <About />
+        <Projects />
+        <Contact />
+      </Suspense>
     </div>
-  )
+  );
 }
