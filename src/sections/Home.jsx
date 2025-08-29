@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import background from "../assets/background.png";
 
 export default function Home() {
     return (
@@ -6,11 +7,15 @@ export default function Home() {
             id="home"
             className="relative min-h-screen flex items-center justify-center overflow-hidden text-center"
         >
-            {/* BG slojevi */}
+
+            <div className="absolute inset-0 -z-10 opcity-80">
+                <img src={background} alt="" />
+            </div>
+            {/* BG slojevi
             <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_bottom,#0a0a23,#0f0f3d)]" />
             <div aria-hidden className="absolute inset-0 hero-dot-pattern opacity-20" />
             <div aria-hidden className="absolute -left-40 -bottom-40 w-[520px] h-[520px] rounded-full blur-3xl opacity-25 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.25),transparent_60%)]" />
-            <div aria-hidden className="absolute -right-56 top-20 w-[600px] h-[600px] rounded-full blur-3xl opacity-20 bg-[radial-gradient(circle_at_60%_40%,rgba(59,130,246,0.22),transparent_60%)]" />
+            <div aria-hidden className="absolute -right-56 top-20 w-[600px] h-[600px] rounded-full blur-3xl opacity-20 bg-[radial-gradient(circle_at_60%_40%,rgba(59,130,246,0.22),transparent_60%)]" /> */}
 
             {/* Sadržaj */}
             <div className="relative z-10 w-full max-w-3xl mx-auto px-6 pt-28 flex flex-col items-center">
