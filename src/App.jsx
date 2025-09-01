@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./sections/Navbar";
 import Home from "./sections/Home";
 import { Suspense } from "react";
 // import { lazy } from "react";
