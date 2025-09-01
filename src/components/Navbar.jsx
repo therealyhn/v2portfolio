@@ -98,8 +98,8 @@ export default function Navbar() {
                 </ul>
 
                 {/* Dropdown + Theme toggle */}
-                <div className="flex items-center gap-5">
-                    {/* Dropdown */}
+                <div className="flex items-center gap-4">
+                    {/* Dropdown: Old Versions */}
                     <div className="relative">
                         <button
                             ref={buttonRef}
@@ -107,30 +107,35 @@ export default function Navbar() {
                             onClick={() => setOpen((o) => !o)}
                             aria-haspopup="menu"
                             aria-expanded={open}
-                            className="rounded-lg bg-surface-2 dark:bg-black text-white font-semibold px-4 py-2
-                         hover:bg-brand hover:text-white transition duration-300
-                         flex items-center gap-2"
+                            className={[
+                                "inline-flex items-center gap-2 px-3.5 py-2 rounded-lg",
+                                "bg-white text-black dark:bg-surface-2 dark:text-white",
+                                "shadow-sm hover:shadow-md",
+                                "transition-colors duration-200",
+                                "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60",
+                                "active:scale-[0.98]",
+                            ].join(" ")}
+
                         >
                             Old Ver.
-                            {/* caret */}
                             <svg
                                 className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
 
+                        {/* Menu */}
                         {open && (
                             <ul
                                 ref={menuRef}
                                 role="menu"
-                                className="absolute right-0 mt-2 w-20 rounded-md bg-white dark:bg-surface-2
-                           text-black dark:text-white shadow-lg ring-1 ring-black/10 overflow-hidden"
+                                className={[
+                                    "absolute right-0 mt-2 w-24 overflow-hidden rounded-lg",
+                                    "bg-white text-black dark:bg-surface-2 dark:text-white",
+                                    "shadow-lg ring-1 ring-black/10",
+                                ].join(" ")}
                             >
                                 <li role="none">
                                     <a
@@ -138,53 +143,53 @@ export default function Navbar() {
                                         href="https://v1.jovanljusic.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block px-4 py-2 text-center hover:bg-brand hover:text-white transition border-b border-b-white/20"
                                         onClick={() => setOpen(false)}
+                                        className={[
+                                            "block px-3 py-2 text-center text-sm",
+                                            "hover:bg-brand hover:text-white",
+                                            "transition-colors",
+                                            "focus:outline-none focus-visible:bg-brand focus-visible:text-white",
+                                        ].join(" ")}
                                     >
                                         v1
                                     </a>
                                 </li>
-
-                                {/* <li role="none">
-                                    <a
-                                        role="menuitem"
-                                        href="https://v2.jovanljusic.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="block px-4 py-2 text-center hover:bg-brand hover:text-white transition border-b border-b-white/20"
-                                        onClick={() => setOpen(false)}
-                                    >
-                                        v2
-                                    </a>
-                                </li> */}
-
                             </ul>
                         )}
                     </div>
 
-                    {/* Theme toggle (SVG, bez dodatnih biblioteka) */}
+                    {/* Theme toggle */}
                     <button
                         type="button"
                         onClick={() => setDarkMode((d) => !d)}
-                        className="p-2 rounded-lg bg-surface-2 text-black dark:bg-surface text-white
-                       hover:bg-brand hover:text-white transition"
                         aria-label="Toggle theme"
                         title="Toggle light/dark mode"
+                        className={[
+                            "inline-flex items-center justify-center w-10 h-10 rounded-lg",
+                            "bg-white text-black dark:bg-surface-2 dark:text-white",
+                            "shadow-sm hover:shadow-md",
+                            "transition-colors duration-200",
+                            "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60",
+                            "active:scale-[0.98]",
+                        ].join(" ")}
+
+
                     >
                         {darkMode ? (
-                            // Sun (light icon)
+                            // Sun
                             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
                                 <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
                                 <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" strokeWidth="2" fill="none" />
                             </svg>
                         ) : (
-                            // Moon (dark icon)
+                            // Moon
                             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79Z" />
                             </svg>
                         )}
                     </button>
                 </div>
+
             </div>
         </nav>
     );

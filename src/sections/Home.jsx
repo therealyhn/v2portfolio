@@ -63,25 +63,27 @@ export default function Home() {
                         loading="lazy"
                     />
 
-                    {/* vertical label */}
-                    <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-full hidden lg:block">
-                        <div className="-rotate-90 tracking-[0.35em] text-black/80 dark:text-white/90 font-semibold">
+                    <div className="absolute top-1/2 -translate-y-1/2 -right-10 hidden lg:block">
+                        <div className="-rotate-90 tracking-[0.35em] text-white/90 font-semibold">
                             MY EXPERTISE
-                            <span className="inline-block align-middle ml-3 w-12 h-[2px] bg-black/70 dark:bg-white/70" />
+                            <span className="inline-block align-middle ml-3 w-12 h-[2px] bg-white/70" />
                         </div>
                     </div>
 
-                    {/* tech icons */}
-                    <div className="hidden lg:flex flex-col gap-4 items-center absolute right-0 top-1/2 -translate-y-1/2 pr-2">
-                        {[reactLogo, tailwindLogo, jsLogo, cssLogo, htmlLogo].map((icon, idx) => (
-                            <img
-                                key={idx}
-                                src={icon}
-                                alt="Tech logo"
-                                className="w-12 h-12 p-2 bg-white/90 dark:bg-white/80 rounded-full shadow-md hover:scale-110 transition"
-                            />
-                        ))}
+                    {/* tech */}
+                    <div className="hidden lg:flex flex-col gap-4 items-center absolute right-3 top-1/2 -translate-y-1/2">
+                        {[reactLogo, tailwindLogo, jsLogo, cssLogo, htmlLogo].map(
+                            (icon, idx) => (
+                                <img
+                                    key={idx}
+                                    src={icon}
+                                    alt="Tech logo"
+                                    className="w-12 h-12 p-2 bg-white/90 rounded-full shadow-md hover:scale-110 transition"
+                                />
+                            )
+                        )}
                     </div>
+
                 </div>
             </div>
         </section>
