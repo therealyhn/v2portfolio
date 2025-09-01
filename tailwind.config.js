@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       colors: {
-        // Tvoja paleta
+
         brand: {
           DEFAULT: "#3B82F6", // blue-500
           50:  "#EFF6FF",

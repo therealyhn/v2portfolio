@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo_dark_new.png"; // ubaci svoj logo
+import logo from "../assets/logo_dark_new.png";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -13,17 +13,17 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"
+            className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "bg-surface/80 backdrop-blur-sm" : "bg-transparent"
                 }`}
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4 flex items-center justify-between">
-                {/* Logo levo */}
+                {/* Logo */}
                 <a href="#home" className="flex items-center gap-2">
-                    <img src={logo} alt="Logo" className="h-10 w-auto" />
+                    <img src={logo} alt="Logo" className="h-14 md:h-16 w-auto" />
                 </a>
 
-                {/* Centar: linkovi */}
-                <ul className="hidden md:flex items-center gap-8 text-white/80">
+                {/* linkovi */}
+                <ul className="hidden md:flex items-center gap-8 text-white/80 font-heading text-md tracking-wide">
                     {[
                         { href: "#home", label: "HOME" },
                         { href: "#services", label: "SERVICES" },
@@ -34,12 +34,12 @@ export default function Navbar() {
                         <li key={item.href}>
                             <a
                                 href={item.href}
-                                className="group relative px-1 py-2 tracking-wide hover:text-white transition"
+                                className="group relative px-1 py-2 hover:text-white transition"
                             >
                                 {item.label}
                                 <span
                                     className="pointer-events-none absolute left-0 -bottom-1 h-[3px] w-0
-                             bg-gradient-to-r from-blue-400 to-blue-600 rounded-full
+                             bg-gradient-to-r from-brand to-brand-600 rounded-full
                              transition-all duration-300 group-hover:w-full"
                                 />
                             </a>
@@ -50,8 +50,8 @@ export default function Navbar() {
                 {/* Desno: CTA */}
                 <a
                     href="#contact"
-                    className="ml-6 rounded-lg bg-blue-500 text-white font-semibold px-4 py-2
-                     hover:bg-blue-600 transition"
+                    className="ml-6 rounded-lg bg-black text-white font-semibold px-4 py-2
+                     hover:bg-brand-600 shadow-glow-sm transition"
                 >
                     Let’s Talk
                 </a>
