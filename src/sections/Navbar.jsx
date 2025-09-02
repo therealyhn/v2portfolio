@@ -42,7 +42,7 @@ export default function Navbar() {
             className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "bg-surface/30 dark:bg-surface-2/80 backdrop-blur-sm" : "bg-transparent"
                 }`}
         >
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 py-1 flex justify-between items-center">
                 {/* Logo */}
                 <Logo logoLight={logoLight} logoDark={logoDark} />
 
