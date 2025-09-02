@@ -1,20 +1,10 @@
 // src/components/nav/MobileOverlay.jsx
-import { useEffect } from "react";
+import useScrollLock from "../../hooks/useScrollLock";
 import NavLinks from "./NavLinks";
 
 export default function MobileOverlay({ open, onClose, logoLight, logoDark }) {
     // Lock/unlock page scroll while overlay is open
-    useEffect(() => {
-        if (!open) return;
-        const prevHtmlOverflow = document.documentElement.style.overflow;
-        const prevBodyOverflow = document.body.style.overflow;
-        document.documentElement.style.overflow = "hidden";
-        document.body.style.overflow = "hidden";
-        return () => {
-            document.documentElement.style.overflow = prevHtmlOverflow;
-            document.body.style.overflow = prevBodyOverflow;
-        };
-    }, [open]);
+    useScrollLock(open, onClose);
 
     if (!open) return null;
 
