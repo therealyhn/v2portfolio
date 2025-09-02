@@ -32,7 +32,6 @@ export default function VersionsDropdown() {
                 className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg
                    bg-white text-black dark:bg-surface-2 dark:text-white
                    shadow-sm hover:shadow-md transition-colors duration-200
-                   hover:bg-brand hover:text-white
                    focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60
                    active:scale-[0.98]"
             >

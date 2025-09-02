@@ -3,6 +3,7 @@ import tailwindLogo from "../assets/tailwindcss.svg";
 import cssLogo from "../assets/css.svg";
 import htmlLogo from "../assets/html5.svg";
 import jsLogo from "../assets/javascript.svg";
+
 import HeroTitle from "../components/hero/HeroTitle";
 import HeroBadge from "../components/hero/HeroBadge";
 import HeroButtons from "../components/hero/HeroButtons";
@@ -35,6 +36,24 @@ export default function Home() {
                     <ExpertiseDesktop tech={tech} />
                 </div>
             </div>
+            
+            <a
+                href="#about"
+                className="absolute bottom-6 left-1/2 -translate-x-1/2 text-black/70 dark:text-white/70
+             hover:text-brand transition-colors animate-bounce"
+                aria-label="Scroll to About section"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
         </section>
     );
 }
