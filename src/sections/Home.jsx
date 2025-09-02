@@ -20,7 +20,7 @@ export default function Home() {
                 <div className="relative flex items-center order-2 lg:order-1">
                     <div className="flex flex-col items-center mx-auto px-6 lg:px-8 pt-10 lg:pt-28 pb-14 lg:pb-20">
                         <HeroTitle name="Jovan Ljusic" />
-                        <HeroBadge text="I’M A FRONTEND DEVELOPER" />
+                        <HeroBadge text="FRONTEND DEVELOPER" />
                         <HeroButtons />
 
                         {/* Mobile expertise label */}
@@ -36,7 +36,7 @@ export default function Home() {
                     <ExpertiseDesktop tech={tech} />
                 </div>
             </div>
-            
+
             <a
                 href="#about"
                 className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 text-black/70 dark:text-white/70

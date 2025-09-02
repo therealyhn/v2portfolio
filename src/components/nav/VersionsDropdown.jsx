@@ -56,7 +56,7 @@ export default function VersionsDropdown() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setOpen(false)}
-                            className="block px-3 py-2 text-center text-sm hover:bg-brand hover:text-white transition-colors"
+                            className="block px-3 py-2 text-center text-sm hover:bg-brand-800 hover:text-white transition-colors"
                         >
                             v1
                         </a>
