@@ -14,7 +14,7 @@ export default function Home() {
     const tech = [reactLogo, tailwindLogo, jsLogo, cssLogo, htmlLogo];
 
     return (
-        <section id="home" className="relative min-h-screen bg-white text-black dark:bg-surface dark:text-white">
+        <section id="home" className="relative min-h-screen bg-lightsurface text-black dark:bg-surface dark:text-white">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-0 min-h-screen">
                 {/* Left */}
                 <div className="relative flex items-center order-2 lg:order-1">

@@ -4,7 +4,7 @@ export default function FeatureCard({ icon, label }) {
     return (
         <div
             className="rounded-xl 
-                 bg-white dark:bg-surface-2/40
+                 bg-lightsurface-3 dark:bg-surface-2/40
                  ring-1 ring-black/5 dark:ring-white/5
                  p-8 flex flex-col items-center justify-center text-center shadow-glow-sm dark:shadow-none
                  transition-all duration-300 ease-out transform
@@ -14,7 +14,7 @@ export default function FeatureCard({ icon, label }) {
         >
             <div
                 className="w-12 h-12 rounded-lg 
-                   bg-gray-100 dark:bg-black/25 
+                   bg-lightsurface-4 dark:bg-surface-4 
                    grid place-items-center 
                    ring-1 ring-black/10 dark:ring-white/10 mb-4"
             >

@@ -5,8 +5,8 @@ const chips = ["JavaScript", "React", "React Native", "Tailwind CSS", "HTML5", "
 
 export default function AboutBio() {
     return (
-        <div className="rounded-2xl bg-white/70 dark:bg-surface ring-black/5 dark:ring-white/5 p-8">
-            <div className="w-40 h-40 mx-auto md:mx-0 rounded-full bg-gray-100 dark:bg-black/20 grid place-items-center
+        <div className="rounded-2xl bg-lightsurface-2 dark:bg-surface-4 ring-black/5 dark:ring-white/5 p-8">
+            <div className="w-40 h-40 mx-auto md:mx-0 rounded-full bg-lightsurface-3 dark:bg-black/20 grid place-items-center
             transition-all duration-300 ease-out transform hover:-translate-y-2 dark:hover:shadow-lg shadow-glow-sm ring-1 ring-black/10 dark:ring-white/10">
                 <User2 className="w-16 h-16 text-brand" />
 
@@ -39,7 +39,7 @@ export default function AboutBio() {
                 {chips.map((c) => (
                     <span
                         key={c}
-                        className="rounded-full bg-gray-100 text-gray-800 ring-1 ring-black/10
+                        className="rounded-full bg-lightsurface-3 text-gray-800 ring-1 ring-black/10
                        dark:bg-white/10 dark:text-white/80 dark:ring-white/10
                        px-3 py-1 text-sm hover:ring-brand/40 dark:hover:ring-brand/40
                        transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-lg transition"

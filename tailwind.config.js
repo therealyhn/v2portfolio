@@ -34,10 +34,18 @@ export default {
           DEFAULT: "#0b0b12", // glavna pozadina
           2: "#0f0f3d",      // sekundarna / paneli
           3: "#111827",      // tamniji overlay
+          4: "#0e0e18ff",
+        },
+        lightsurface: {
+          DEFAULT: "#F7F7F8",
+          2: "#F0F1F3",
+          3: "#f5f5f5ff",
+          4: "#ecececff"
         },
         // korisne neutralne nijanse
         muted: {
-          DEFAULT: "#9CA3AF",
+          // DEFAULT: "#9CA3AF",
+          DEFAULT: "#394a6bff",
           2: "#6B7280",
         },
       },
