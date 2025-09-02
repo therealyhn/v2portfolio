@@ -12,7 +12,7 @@ const items = [
 
 export default function FeatureGrid() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
             {items.map((it) => (
                 <FeatureCard key={it.label} icon={it.icon} label={it.label} />
             ))}

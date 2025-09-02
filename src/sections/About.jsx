@@ -18,7 +18,7 @@ export default function AboutSection() {
             </div>
             <a
                 href="#projects"
-                className="absolute bottom-6 left-1/2 -translate-x-1/2 text-black/70 dark:text-white/70
+                className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 text-black/70 dark:text-white/70
              hover:text-brand transition-colors animate-bounce"
                 aria-label="Scroll to Projects section"
             >

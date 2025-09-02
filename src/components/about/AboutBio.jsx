@@ -1,20 +1,30 @@
 import { User2 } from "lucide-react";
+// import profileImg from "../../assets/profile.png"
 
 const chips = ["JavaScript", "React", "React Native", "Tailwind CSS", "HTML5", "CSS3", "Git", "GitHub", "VS Code"];
 
 export default function AboutBio() {
     return (
         <div className="rounded-2xl bg-white/70 dark:bg-surface ring-black/5 dark:ring-white/5 p-8">
-            <div className="w-40 h-40 rounded-full bg-gray-100 dark:bg-black/20 grid place-items-center
+            <div className="w-40 h-40 mx-auto md:mx-0 rounded-full bg-gray-100 dark:bg-black/20 grid place-items-center
             transition-all duration-300 ease-out transform hover:-translate-y-2 dark:hover:shadow-lg shadow-glow-sm ring-1 ring-black/10 dark:ring-white/10">
                 <User2 className="w-16 h-16 text-brand" />
+
+                {/* my pic */}
+                {/* <div className="mx-auto w-40 h-40 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10">
+                    <img
+                        src={profilePhoto}
+                        alt="Jovan Ljusic"
+                        className="w-full h-full object-cover p-1"
+                    />
+                </div> */}
             </div>
 
             {/* Bio */}
-            <div className="mt-8 space-y-5 text-gray-800 dark:text-white/80 leading-7">
+            <div className="mt-8 space-y-5 text-gray-800 dark:text-white/80 leading-7 text-center md:text-left">
                 <p>
                     I'm a certified Front-End Developer from ITAcademy, LinkGroup, Serbia with specialization in crafting responsive, user-centered web applications.
-                    With React, Tailwind CSS, and more modern JavaScript/CSS frameworks, I create interactive interfaces and dynamic user experiences.
+                    With React, Tailwind CSS and more modern JavaScript/CSS frameworks, I create interactive interfaces and dynamic user experiences.
                     An innovator at heart, I thrive on projects that push the boundaries of web development and design value-added, leading-edge solutions.
                 </p>
                 <p>
@@ -25,7 +35,7 @@ export default function AboutBio() {
             </div>
 
             {/* Chips */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center  gap-3">
                 {chips.map((c) => (
                     <span
                         key={c}
