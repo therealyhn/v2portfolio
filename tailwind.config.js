@@ -47,7 +47,7 @@ export default {
       },
       boxShadow: {
         glow: "0 20px 60px rgba(59,130,246,.35)",
-        "glow-sm": "0 10px 30px rgba(59,130,246,.25)",
+        "glow-sm": "0 5px 10px rgba(59,130,246,.25)",
       },
       borderRadius: {
         xl: "0.9rem",

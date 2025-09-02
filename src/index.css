@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
+* {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
 html { scroll-behavior: smooth; }
 
 /* Suptilan dot-grid pattern (koristi se u Home) */

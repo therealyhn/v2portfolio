@@ -39,7 +39,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "bg-surface/80 dark:bg-surface-2/80 backdrop-blur-sm" : "bg-transparent"
+            className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "bg-surface/30 dark:bg-surface-2/80 backdrop-blur-sm" : "bg-transparent"
                 }`}
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4 flex justify-between items-center">

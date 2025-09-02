@@ -3,15 +3,26 @@ export default function FeatureCard({ icon, label }) {
 
     return (
         <div
-            className="rounded-xl bg-surface-2/40 ring-1 ring-white/5 p-8
-                 flex flex-col items-center justify-center text-center
-                 transition transform
-                 hover:-translate-y-2 hover:bg-surface-2/60 hover:shadow-lg"
+            className="rounded-xl 
+                 bg-white dark:bg-surface-2/40
+                 ring-1 ring-black/5 dark:ring-white/5
+                 p-8 flex flex-col items-center justify-center text-center shadow-glow-sm dark:shadow-none
+                 transition-all duration-300 ease-out transform
+                 hover:-translate-y-2 hover:shadow-lg
+                 hover:bg-gray-50 dark:hover:bg-surface-2/60
+                 hover:ring-brand/50"
         >
-            <div className="w-12 h-12 rounded-lg bg-black/25 grid place-items-center ring-1 ring-white/10 mb-4">
+            <div
+                className="w-12 h-12 rounded-lg 
+                   bg-gray-100 dark:bg-black/25 
+                   grid place-items-center 
+                   ring-1 ring-black/10 dark:ring-white/10 mb-4"
+            >
                 <Icon className="w-7 h-7 text-brand" />
             </div>
-            <div className="text-white/90 font-medium">{label}</div>
+            <div className="text-gray-800 dark:text-white/90 font-medium">
+                {label}
+            </div>
         </div>
     );
 }

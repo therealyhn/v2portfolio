@@ -7,7 +7,7 @@ export default function NavLinks({ onClick }) {
         { href: "/resume.pdf", label: "RESUME" },
     ];
     return (
-        <ul className="flex flex-col md:flex-row items-start md:items-center md:gap-8 gap-4 text-black/90 dark:text-white/80 font-heading text-sm md:text-md tracking-wide">
+        <ul className="flex flex-col md:flex-row items-start md:items-center md:gap-8 gap-4 text-black dark:text-white/80 font-heading text-md md:text-md tracking-wide">
             {links.map((item) => (
                 <li key={item.href} onClick={onClick}>
                     <a

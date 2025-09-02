@@ -6,7 +6,7 @@ export default function AboutSection() {
     return (
         <section
             id="about"
-            className="relative py-20 bg-surface text-white dark:bg-surface dark:text-white"
+            className="relative py-20 bg-white text-black dark:bg-surface dark:text-white"
         >
             <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
                 <AboutHeader />
