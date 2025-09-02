@@ -59,7 +59,7 @@ export default function ProjectCard({ project, onOpen }) {
                             className="inline-flex items-center gap-1.5 text-brand hover:text-brand-600"
                         >
                             <IconExternal />
-                            Live Demo
+                            Check it out
                         </a>
                     )}
                     {project.links?.github && (

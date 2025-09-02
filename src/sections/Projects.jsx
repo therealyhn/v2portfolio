@@ -14,7 +14,7 @@ const projectsData = [
             + "Designed intuitive navigation and integrated animate.css for smooth animations. "
             + "Implemented a detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
             + "Created a scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop",
+        cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
         images: [
             "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
@@ -32,57 +32,83 @@ const projectsData = [
             + "Integrated a functional contact form to streamline client communication."
             + "Enhanced loading times through optimized code and asset management."
             + "Crafted content and design elements to align with the company’s brand identity and values.",
-        cover: "https://images.unsplash.com/photo-1611162618071-b39a2ec5f1f4?q=80&w=1400&auto=format&fit=crop",
+        cover: "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1600&auto=format&fit=crop",
         images: [
             "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1600&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1557825835-70d97c4aa06a?q=80&w=1600&auto=format&fit=crop",
         ],
-        tags: ["React", "Vite", "TailwindCSS", "Animate.css", "Adobe Photoshop"],
+        tags: ["React", "TailwindCSS", "Animate.css", "Photoshop"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
     {
-        id: "analytics",
-        title: "Analytics Dashboard",
-        summary: "Data visualization dashboard with real-time updates and comprehensive reporting.",
+        id: "jumpnrun",
+        title: "Madara vs Shinobi Alliance",
+        summary: "Classic jump-and-run game featuring custom-designed characters, FPS tracking, speed tracking, and score tracking.",
         longDescription:
-            "Analytics suite with live WebSocket updates, role-based access and export to CSV/PDF. Charts built with D3 and performance-tuned for large datasets.",
-        cover: "https://images.unsplash.com/photo-1551281044-8b89ad3fdde3?q=80&w=1400&auto=format&fit=crop",
+            "One of my first projects, a classic jump-and-run game. Features custom-designed characters."
+            + "Includes tracking for FPS, speed, and score."
+            + "Offers smooth controls and challenging tasks."
+            + "Showcases a unique visual style, bringing a fresh take to the traditional genre.",
+        cover: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
         images: [
             "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=1600&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
         ],
-        tags: ["React", "D3.js", "Python", "FastAPI"],
-        links: { demo: "#", github: "#" },
+        tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
+        links: { demo: "https://madara-vs-shinobi-alliance.jovanljusic.com/", github: "https://github.com/therealyhn/madara_vs_alliance" },
     },
 
 
     // dodatni projekti za Show More
     {
-        id: "portfolio",
-        title: "Personal Portfolio v2",
-        summary: "Single page portfolio sa React + Vite + Tailwind, light/dark i lazy loading.",
+        id: "planner",
+        title: "DJ Event Planner",
+        summary: "Responsive DJ event planner web app that allows users to track, add, edit, and delete events. Features include a toggleable calendar view, live event updates, and local storage.",
         longDescription:
-            "Druga verzija ličnog portfolija sa sekcijama, glatkim animacijama i pristupačnim navigacionim obrascima.",
-        cover: "https://images.unsplash.com/photo-1526920929362-5b9610f3e979?q=80&w=1400&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
-        ],
-        tags: ["React", "Vite", "Tailwind"],
-        links: { demo: "#", github: "#" },
-    },
-    {
-        id: "chat",
-        title: "Realtime Chat",
-        summary: "Chat app sa rooms, prisustvom i notifikacijama.",
-        longDescription:
-            "Rooms, tipkanje, prisustvo i push notifikacije preko WebSocket-a. Čuvanje poruka i pretraga.",
+            "Allows users to track, add, edit, and delete events."
+            + "Includes a toggleable calendar view for easier event management."
+            + "Provides real-time updates for immediate changes."
+            + "Utilizes local storage for persistent data across sessions.",
         cover: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop",
         images: [
             "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
         ],
-        tags: ["React", "Socket.io", "Node.js"],
+        tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
+        links: { demo: "https://djeventplanner.jovanljusic.com/", github: "https://github.com/therealyhn/djeventplanner" },
+    },
+    {
+        id: "foto",
+        title: "Nikola Petković Photography Website",
+        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
+        longDescription:
+            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
+            + "Lorem ipsum dolor sit amet."
+            + "Testing lorem ipsum."
+            + "Test Test Test.",
+        cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
+        images: [
+            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
+        ],
+        tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
+        links: { demo: "#", github: "#" },
+    },
+    {
+        id: "foto2",
+        title: "Aleksandar Jovanović Photography Website",
+        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
+        longDescription:
+            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
+            + "Lorem ipsum dolor sit amet."
+            + "Testing lorem ipsum."
+            + "Test Test Test.",
+        cover: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
+        images: [
+            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
+        ],
+        tags: ["React", "Vite", "Tailwind", "Animate.css"],
         links: { demo: "#", github: "#" },
     },
 ];
