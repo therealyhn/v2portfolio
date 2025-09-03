@@ -54,7 +54,7 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={onSubmit}
-            className="rounded-2xl bg-white/80 text-black ring-1 ring-black/10 p-6 md:p-8
+            className="rounded-2xl bg-white/80 dark:bg-surface-2/40 text-black ring-1 ring-black/10 p-6 md:p-8
                  dark:bg-surface-1 dark:text-white dark:ring-white/10"
         >
             {/* honeypot field (skriveno) */}
@@ -109,8 +109,8 @@ export default function ContactForm() {
                 {status.msg && (
                     <div
                         className={`text-sm rounded-md px-3 py-2 ${status.ok
-                                ? "bg-green-500/10 text-green-700 ring-1 ring-green-500/20 dark:text-green-300"
-                                : "bg-red-500/10 text-red-700 ring-1 ring-red-500/20 dark:text-red-300"
+                            ? "bg-green-500/10 text-green-700 ring-1 ring-green-500/20 dark:text-green-300"
+                            : "bg-red-500/10 text-red-700 ring-1 ring-red-500/20 dark:text-red-300"
                             }`}
                     >
                         {status.msg}
@@ -125,9 +125,26 @@ export default function ContactForm() {
                      hover:bg-brand-600 shadow-glow-sm transition
                      disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 3.3a2 2 0 001.5 0L21 8m-9 4v6" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="w-5 h-5"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M22 2L11 13"
+                        />
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M22 2L15 22l-4-9-9-4 20-7z"
+                        />
                     </svg>
+
                     {loading ? "Sending..." : "Send Message"}
                 </button>
             </div>

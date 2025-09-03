@@ -3,7 +3,7 @@ import SocialButton from "../components/contact/SocialButton";
 import ContactForm from "../components/contact/ContactForm";
 import SectionHeader from "../components/projects/SectionHeader";
 
-// Male SVG ikone bez biblioteka
+// svg icons
 const MailIcon = (
     <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16v12H4z" />
@@ -25,40 +25,83 @@ const GithubIcon = (
 );
 
 const LinkedinIcon = (
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-        <path d="M6.94 6.5A2.44 2.44 0 014.5 4.06 2.44 2.44 0 016.94 1.6a2.44 2.44 0 012.44 2.44A2.44 2.44 0 016.94 6.5zM2.5 8.5h8.9V22H2.5zM13.9 8.5h8.1V22h-8.1z" />
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-5 h-5"
+    >
+        <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 
+           2.239 5 5 5h14c2.761 0 5-2.239 
+           5-5V5c0-2.761-2.239-5-5-5zm-11 
+           19H5V9h3v10zM6.5 7.7C5.3 
+           7.7 4.3 6.7 4.3 5.5S5.3 
+           3.3 6.5 3.3c1.2 0 2.2 1 2.2 
+           2.2s-1 2.2-2.2 2.2zM20 
+           19h-3v-5.6c0-1.3-.5-2.1-1.6-2.1-1 
+           0-1.5.7-1.7 1.3-.1.2-.1.5-.1.8V19h-3s.1-9 
+           0-10h3v1.4c.4-.6 1.1-1.5 2.7-1.5 
+           2 0 3.5 1.3 3.5 4.1V19z"/>
+    </svg>
+
+);
+
+const InstagramIcon = (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        className="w-5 h-5"
+    >
+        {/* Spoljni okvir */}
+        <rect
+            x="2"
+            y="2"
+            width="20"
+            height="20"
+            rx="5"
+            ry="5"
+        />
+        {/* Sočivo */}
+        <circle cx="12" cy="12" r="4" />
+        {/* Mala tačka gore desno */}
+        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
     </svg>
 );
 
+
 export default function Contact() {
     return (
-        <section id="contact" className="py-20 bg-lightsurface-2 text-black dark:bg-surface dark:text-white">
+        <section id="contact" className="py-20 bg-lightsurface-2 text-black dark:bg-surface-4 dark:text-white">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <SectionHeader lead="Get In" accent="Touch" />
 
                 <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    {/* Leva kolona */}
+                    {/* info */}
                     <div>
                         <h3 className="font-heading text-2xl font-semibold">Let’s work together</h3>
                         <p className="mt-4 text-surface dark:text-white/70 max-w-xl">
-                            I’m always open to discussing new opportunities, interesting projects, or just having a chat
-                            about technology and development.
+                            I'm actively exploring new job opportunities and exciting projects.
+                            My inbox is always open, so whether you have a question, a collaboration in mind or just want to say hello, feel free to reach out.
                         </p>
 
                         <div className="mt-8 space-y-6">
-                            <InfoItem icon={MailIcon} label="Email" value="john.doe@example.com" />
-                            <InfoItem icon={PinIcon} label="Location" value="San Francisco, CA" />
+                            <InfoItem icon={MailIcon} label="Email" value="contact@jovanljusic.com" />
+                            <InfoItem icon={PinIcon} label="Location" value="Belgrade, Serbia" />
                         </div>
 
                         {/* Socials */}
                         <div className="mt-8 flex items-center gap-3">
-                            <SocialButton href="https://github.com/" label="GitHub">{GithubIcon}</SocialButton>
+                            <SocialButton href="https://github.com/therealyhn" label="GitHub">{GithubIcon}</SocialButton>
                             <SocialButton href="https://linkedin.com/" label="LinkedIn">{LinkedinIcon}</SocialButton>
-                            {/* Dodaj još po potrebi */}
+                            <SocialButton href="https://www.instagram.com/jovanljusic_asdf" label="Instagram">{InstagramIcon}</SocialButton>
+
                         </div>
                     </div>
 
-                    {/* Desna kolona – Forma */}
+                    {/* form */}
                     <ContactForm />
                 </div>
             </div>
