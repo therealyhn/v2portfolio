@@ -40,7 +40,7 @@ export default function Home() {
             <a
                 href="#about"
                 className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 text-black/70 dark:text-white/70
-             hover:text-brand transition-colors animate-bounce"
+             hover:text-brand transition-colors animate-bounce cursor-pointer"
                 aria-label="Scroll to About section"
             >
                 <svg

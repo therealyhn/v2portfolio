@@ -1,4 +1,3 @@
-
 import person from "../../assets/hero.png";
 
 export default function Portrait() {
@@ -11,6 +10,7 @@ export default function Portrait() {
         left-1/2 -translate-x-1/2 w-[360px] sm:w-[420px] lg:w-[520px]
         max-w-full select-none
         lg:left-1 lg:-translate-x-1/2
+        animate__animated animate__fadeIn animate__delay-0.5s
       "
             loading="lazy"
         />
