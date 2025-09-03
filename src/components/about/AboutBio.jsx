@@ -12,7 +12,7 @@ export default function AboutBio() {
                 </p>
                 <p>
                     Working currently as an IT Engineer,
-                    I soon upgraded to the role of managing the entire IT infrastructure of a 200+ employee-strong company
+                    I soon upgraded to the role of managing the entire IT infrastructure with another collige of a 200+ employee-strong company
                     with 20+ retail stores across several countries, in the wake of a veteran IT Manager's departure.
                 </p>
             </div>

@@ -27,10 +27,10 @@ const projectsData = [
         title: "Mane's Barbershop",
         summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
         longDescription:
-            "Developed a modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
-            + "Designed intuitive navigation and integrated animate.css for smooth animations. "
-            + "Implemented a detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
-            + "Created a scalable framework to accommodate client-specific content updates, including text and images.",
+            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
+            + "Intuitive navigation and integrated animate.css for smooth animations. "
+            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
+            + "Scalable framework to accommodate client-specific content updates, including text and images.",
         cover: Project1Thumbnail,
         images: [Project1Slide1, Project1Slide2],
         tags: ["React", "Vite", "TailwindCSS", "Animate.css"],

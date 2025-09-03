@@ -69,7 +69,7 @@ export default function ProjectModal({ open, onClose, project }) {
                 <img
                   src={src}
                   alt=""
-                  className="w-full h-[240px] sm:h-[360px] object-cover select-none"
+                  className="w-full h-[200px] sm:h-[360px] object-cover select-none"
                   draggable="false"
                 />
               </div>

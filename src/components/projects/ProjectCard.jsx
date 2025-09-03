@@ -18,6 +18,7 @@ function IconGithub({ className = "w-4 h-4" }) {
 export default function ProjectCard({ project, onOpen }) {
     return (
         <article
+            onClick={() => onOpen(project)}
             className="group overflow-hidden rounded-xl
                  bg-lightsurface-4 shadow-lg text-black ring-1 ring-black/5
                  dark:bg-surface-2/40 dark:text-white dark:ring-white/5
@@ -25,7 +26,6 @@ export default function ProjectCard({ project, onOpen }) {
         >
             <button
                 type="button"
-                onClick={() => onOpen(project)}
                 className="relative block w-full overflow-hidden"
                 aria-label={`Open details for ${project.title}`}
             >
@@ -49,7 +49,8 @@ export default function ProjectCard({ project, onOpen }) {
                     ))}
                 </div>
 
-                <div className="mt-5 flex items-center gap-4 text-sm">
+                <div className="mt-5 flex items-center justify-between text-sm">
+
                     {project.links?.demo && (
                         <a
                             href={project.links.demo}
@@ -58,21 +59,10 @@ export default function ProjectCard({ project, onOpen }) {
                             className="inline-flex items-center gap-1.5 text-brand hover:text-brand-600"
                         >
                             <IconExternal />
-                            Check it out
+                            Check the project
                         </a>
                     )}
-                    {project.links?.github && (
-                        <a
-                            href={project.links.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-gray-700 hover:text-black
-                         dark:text-white/70 dark:hover:text-white"
-                        >
-                            <IconGithub />
-                            GitHub
-                        </a>
-                    )}
+                    <p className="text-gray-700 dark:text-white/70 cursor-pointer">Click for details</p>
                 </div>
             </div>
         </article>
