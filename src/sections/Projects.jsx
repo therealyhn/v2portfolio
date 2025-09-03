@@ -2,6 +2,23 @@ import { useMemo, useRef, useState } from "react";
 import SectionHeader from "../components/projects/SectionHeader";
 import ProjectsGrid from "../components/projects/ProjectGrid";
 import ProjectModal from "../components/projects/ProjectModal";
+import ComingSoonImg from "../assets/projects/comingsoon.png";
+import Project1Thumbnail from "../assets/projects/project1_thumbnail.jpg";
+import Project1Slide1 from "../assets/projects/project1_slide1.jpg";
+import Project1Slide2 from "../assets/projects/project1_slide2.jpg";
+import Project2Thumbnail from "../assets/projects/project2_thumbnail.jpg";
+import Project2Slide1 from "../assets/projects/project2_slide1.jpg"
+import Project2Slide2 from "../assets/projects/project2_slide2.jpg"
+import Project3Thumbnail from "../assets/projects/project3_thumbnail.jpg";
+import Project3Slide1 from "../assets/projects/project3_slide1.jpg"
+import Project3Slide2 from "../assets/projects/project3_slide2.jpg"
+import Project4Thumbnail from "../assets/projects/project4_thumbnail.jpg";
+import Project4Slide5 from "../assets/projects/project4_slide5.jpg"
+import Project4Slide1 from "../assets/projects/project4_slide1.jpg"
+import Project4Slide2 from "../assets/projects/project4_slide2.jpg"
+import Project4Slide3 from "../assets/projects/project4_slide3.jpg"
+import Project4Slide4 from "../assets/projects/project4_slide4.jpg"
+
 
 // projekti
 const projectsData = [
@@ -14,11 +31,8 @@ const projectsData = [
             + "Designed intuitive navigation and integrated animate.css for smooth animations. "
             + "Implemented a detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
             + "Created a scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: Project1Thumbnail,
+        images: [Project1Slide1, Project1Slide2],
         tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
         links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
     },
@@ -32,11 +46,8 @@ const projectsData = [
             + "Integrated a functional contact form to streamline client communication."
             + "Enhanced loading times through optimized code and asset management."
             + "Crafted content and design elements to align with the company’s brand identity and values.",
-        cover: "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1600&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1557825835-70d97c4aa06a?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: Project2Thumbnail,
+        images: [Project2Slide1, Project2Slide2],
         tags: ["React", "TailwindCSS", "Animate.css", "Photoshop"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
@@ -49,11 +60,8 @@ const projectsData = [
             + "Includes tracking for FPS, speed, and score."
             + "Offers smooth controls and challenging tasks."
             + "Showcases a unique visual style, bringing a fresh take to the traditional genre.",
-        cover: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: Project3Thumbnail,
+        images: [Project3Slide1, Project3Slide2],
         tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
         links: { demo: "https://madara-vs-shinobi-alliance.jovanljusic.com/", github: "https://github.com/therealyhn/madara_vs_alliance" },
     },
@@ -69,11 +77,8 @@ const projectsData = [
             + "Includes a toggleable calendar view for easier event management."
             + "Provides real-time updates for immediate changes."
             + "Utilizes local storage for persistent data across sessions.",
-        cover: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: Project4Thumbnail,
+        images: [Project4Slide5, Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4],
         tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
         links: { demo: "https://djeventplanner.jovanljusic.com/", github: "https://github.com/therealyhn/djeventplanner" },
     },
@@ -86,11 +91,8 @@ const projectsData = [
             + "Lorem ipsum dolor sit amet."
             + "Testing lorem ipsum."
             + "Test Test Test.",
-        cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: ComingSoonImg,
+        images: [ComingSoonImg, ComingSoonImg],
         tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
         links: { demo: "#", github: "#" },
     },
@@ -103,11 +105,8 @@ const projectsData = [
             + "Lorem ipsum dolor sit amet."
             + "Testing lorem ipsum."
             + "Test Test Test.",
-        cover: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
-        ],
+        cover: ComingSoonImg,
+        images: [ComingSoonImg, ComingSoonImg],
         tags: ["React", "Vite", "Tailwind", "Animate.css"],
         links: { demo: "#", github: "#" },
     },
@@ -180,7 +179,7 @@ export default function ProjectsSection() {
                     </div>
                 )}
             </div>
-                
+
             <ProjectModal open={modalOpen} onClose={() => setModalOpen(false)} project={active} />
         </section>
     );
