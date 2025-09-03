@@ -6,6 +6,7 @@ import { lazy } from "react";
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </Suspense>
     </div>
   );

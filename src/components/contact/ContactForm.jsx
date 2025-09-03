@@ -12,20 +12,19 @@ export default function ContactForm() {
         const form = e.currentTarget;
         const fd = new FormData(form);
 
-        // honeypot (anti-bot). Ako je popunjeno -> bot.
+        // honeypot (anti-bot).
         if (fd.get("botcheck")) {
             setLoading(false);
             setStatus({ ok: false, msg: "Spam detected." });
             return;
         }
 
-        // Obavezan access_key
+        // access key
         fd.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
-        // (opciono) lep subject i dodatna meta
+
         fd.append("subject", "New message from portfolio");
         fd.append("from_name", "Portfolio Contact");
-        // fd.append("redirect", "https://tvoj-domen.com/thanks"); // ako želiš redirect, a ne JSON
         console.log(import.meta.env.VITE_WEB3FORMS_KEY);
 
         try {
@@ -38,7 +37,7 @@ export default function ContactForm() {
             const data = await res.json();
 
             if (data.success) {
-                setStatus({ ok: true, msg: "Message sent. Hvala! ✅" });
+                setStatus({ ok: true, msg: "Message sent. Thanks! ✅" });
                 form.reset();
             } else {
                 setStatus({ ok: false, msg: data.message || "Something went wrong." });
@@ -57,7 +56,7 @@ export default function ContactForm() {
             className="rounded-2xl bg-white/80 dark:bg-surface-2/40 text-black ring-1 ring-black/10 p-6 md:p-8
                  dark:bg-surface-1 dark:text-white dark:ring-white/10"
         >
-            {/* honeypot field (skriveno) */}
+            {/* honeypot field (hidden)*/}
             <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
             <div className="grid grid-cols-1 gap-5">
@@ -105,7 +104,7 @@ export default function ContactForm() {
                     />
                 </div>
 
-                {/* status poruka */}
+                {/* status message */}
                 {status.msg && (
                     <div
                         className={`text-sm rounded-md px-3 py-2 ${status.ok

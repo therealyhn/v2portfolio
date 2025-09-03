@@ -61,7 +61,7 @@ export default function VersionsDropdown() {
                             v1
                         </a>
                     </li>
-                    {/* dodaj v2/v3 po potrebi */}
+                    {/* v2, v3... */}
                 </ul>
             )}
         </div>
