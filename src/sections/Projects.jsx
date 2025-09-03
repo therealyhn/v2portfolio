@@ -180,7 +180,7 @@ export default function ProjectsSection() {
                     </div>
                 )}
             </div>
-
+                
             <ProjectModal open={modalOpen} onClose={() => setModalOpen(false)} project={active} />
         </section>
     );

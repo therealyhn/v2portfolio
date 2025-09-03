@@ -4,7 +4,6 @@ function IconExternal({ className = "w-4 h-4" }) {
     return (
         <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M14 3h7m0 0v7m0-7L10 14" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 19h14V5" />
         </svg>
     );
 }
