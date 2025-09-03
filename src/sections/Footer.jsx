@@ -75,13 +75,13 @@ export default function Footer() {
                     </p>
 
                     <div className="flex items-center gap-5">
-                        <SocialLink href="https://instagram.com/" label="Instagram">
+                        <SocialLink href="https://www.instagram.com/jovanljusic_asdf" label="Instagram">
                             {InstagramIcon}
                         </SocialLink>
-                        <SocialLink href="https://linkedin.com/" label="LinkedIn">
+                        <SocialLink href="https://www.linkedin.com/in/jovan-ljusic/" label="LinkedIn">
                             {LinkedInIcon}
                         </SocialLink>
-                        <SocialLink href="https://github.com/" label="GitHub">
+                        <SocialLink href="https://github.com/therealyhn" label="GitHub">
                             {GithubIcon}
                         </SocialLink>
                     </div>

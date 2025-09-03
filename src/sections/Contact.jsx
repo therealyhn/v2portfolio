@@ -95,7 +95,7 @@ export default function Contact() {
                         {/* Socials */}
                         <div className="mt-8 flex items-center gap-3">
                             <SocialButton href="https://github.com/therealyhn" label="GitHub">{GithubIcon}</SocialButton>
-                            <SocialButton href="https://linkedin.com/" label="LinkedIn">{LinkedinIcon}</SocialButton>
+                            <SocialButton href="https://www.linkedin.com/in/jovan-ljusic/" label="LinkedIn">{LinkedinIcon}</SocialButton>
                             <SocialButton href="https://www.instagram.com/jovanljusic_asdf" label="Instagram">{InstagramIcon}</SocialButton>
 
                         </div>
