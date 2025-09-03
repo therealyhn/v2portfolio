@@ -5,7 +5,7 @@ import { lazy } from "react";
 
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
-// const Contact = lazy(() => import("./sections/Contact"));
+const Contact = lazy(() => import("./sections/Contact"));
 
 export default function App() {
   return (
@@ -17,6 +17,7 @@ export default function App() {
       <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
         <About />
         <Projects />
+        <Contact />
       </Suspense>
     </div>
   );
