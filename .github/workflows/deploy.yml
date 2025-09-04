@@ -47,7 +47,7 @@ jobs:
           # VAŽNO: postavi tačan put!
           # Ako je FTP user "zaključan" u public_html, koristi samo "/"
           # Ako nije zaključan, a deploy ide u glavni domen:
-          server-dir: public_html/
+          server-dir: /
           log-level: verbose
           timeout: 60000
           state-name: .ftp-deploy-sync.json
