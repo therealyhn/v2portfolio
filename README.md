@@ -1,4 +1,4 @@
-# 🌐 Portfolio Website – Jovan Ljusić
+# 🌐 Portfolio Website – Jovan Ljusic
 
 My personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**, showcasing my projects, skills, and contact information.  
 The site is fully responsive, supports **dark/light mode**, and includes smooth animations with **animate.css**.
