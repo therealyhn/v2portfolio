@@ -1,0 +1,48 @@
+name: Deploy to Hostinger (Vite + FTP)
+
+on:
+  push:
+    branches: [ main ]  # promeni ako koristiš drugi branch (npr. master)
+  workflow_dispatch:     # omogućava ručno pokretanje iz Actions taba
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      # VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }} # ako koristiš u buildu
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (Vite)
+        run: npm run build
+        # env:
+        #   VITE_WEB3FORMS_KEY: ${{ env.VITE_WEB3FORMS_KEY }}
+
+      - name: Deploy via FTP
+        if: ${{ env.FTP_HOST && env.FTP_USERNAME && env.FTP_PASSWORD }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ env.FTP_HOST }}
+          username: ${{ env.FTP_USERNAME }}
+          password: ${{ env.FTP_PASSWORD }}
+          # port: 21                  # možeš izostaviti (default)
+          protocol: ftp               # ili ftps ako tvoj hosting traži secure
+          local-dir: dist/
+          server-dir: public_html/    # promeni ako deployuješ u podfolder
+          timeout: 60000
+          state-name: .ftp-deploy-sync.json
