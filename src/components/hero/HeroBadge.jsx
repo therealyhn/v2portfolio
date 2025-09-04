@@ -2,7 +2,7 @@ export default function HeroBadge({ text = "FRONTEND DEVELOPER" }) {
     return (
         <div
             className="mt-6 inline-flex md:w-2/3 justify-center items-center gap-3 px-5 py-2.5 rounded-md relative
-                 bg-brand-100 text-black dark:bg-white/10 dark:text-white
+                 bg-brand-100 text-black dark:bg-surface-3 dark:text-white
                  animate__animated animate__fadeInUp"
         >
             <span className="tracking-[0.30em] sm:tracking-[0.35em] font-extrabold text-xs sm:text-sm">
