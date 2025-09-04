@@ -43,6 +43,6 @@ jobs:
           # port: 21                  # možeš izostaviti (default)
           protocol: ftp               # ili ftps ako tvoj hosting traži secure
           local-dir: dist/
-          server-dir: public_html/    # promeni ako deployuješ u podfolder
+          server-dir: /
           timeout: 60000
           state-name: .ftp-deploy-sync.json
