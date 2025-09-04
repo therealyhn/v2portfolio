@@ -7,7 +7,7 @@ export default function HeroButtons() {
                    hover:bg-brand-600 hover:-translate-y-0.5 transition transform shadow-glow-sm
                    animate__animated animate__fadeInUp animate__delay-1s"
       >
-        My Work <span className="text-lg">💼</span>
+        My Work
       </a>
       <a
         href="#contact"
@@ -15,7 +15,7 @@ export default function HeroButtons() {
                    hover:bg-brand-600 hover:-translate-y-0.5 transition transform shadow-glow-sm
                    animate__animated animate__fadeInUp animate__delay-2s"
       >
-        Get in touch <span className="text-lg">✉</span>
+        Get in touch
       </a>
     </div>
   );
