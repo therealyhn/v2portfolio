@@ -1,12 +1,44 @@
-# 🚀 Portfolio Website v2.0
-A sleek, modern, and responsive portfolio built with React, Vite, and Tailwind CSS. Showcasing my projects, skills, and creativity with a clean design and smooth animations. Let's connect and build something amazing!
+# 🌐 Portfolio Website – Jovan Ljusić
 
-✨ Features:
+My personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**, showcasing my projects, skills, and contact information.  
+The site is fully responsive, supports **dark/light mode**, and includes smooth animations with **animate.css**.
 
-⚡ Blazing-fast performance with Vite
+---
 
-🎨 Styled with Tailwind CSS for a minimalist yet powerful design
+## 🚀 Features
 
-🌟 Fully responsive and accessible
+- 🖼️ Modern, responsive design  
+- 🌙 Light & Dark mode toggle  
+- 🎨 Custom color palette (Tailwind config)  
+- ✨ Animations with animate.css  
+- 📂 Sections split into reusable React components:
+  - **Home** – Hero section with intro  
+  - **About** – Bio, skills, and expertise  
+  - **Projects** – Featured projects with modal previews & Swiper gallery  
+  - **Contact** – Contact form (Web3Forms API integration)  
+  - **Footer** – Social links and copyright info  
+- ⚡ Built with Vite for blazing fast builds  
+- 🔄 Automated GitHub Actions + Hostinger deployment (via FTP)
 
-🛠️ Easy to customize and extend
+---
+
+## 🛠️ Tech Stack
+
+- **React 18**
+- **Vite**
+- **Tailwind CSS**
+- **Animate.css**
+- **Web3Forms** (contact form API)
+- **GitHub Actions** (CI/CD)
+- **Hostinger** (deployment)
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/portfolio-v2.git
+cd portfolio-v2
+npm install
