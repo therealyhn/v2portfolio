@@ -2,18 +2,12 @@ name: Deploy to Hostinger (Vite + FTP)
 
 on:
   push:
-    branches: [ main ]  # promeni ako koristiš drugi branch (npr. master)
-  workflow_dispatch:     # omogućava ručno pokretanje iz Actions taba
+    branches: [main] # promeni ako koristiš drugi branch (npr. master)
+  workflow_dispatch: # ručno pokretanje
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    env:
-      FTP_HOST: ${{ secrets.FTP_HOST }}
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      # VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
 
     steps:
       - name: Checkout repo
@@ -23,26 +17,37 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install deps
         run: npm ci
 
       - name: Build (Vite)
         run: npm run build
-        # env:
-        #   VITE_WEB3FORMS_KEY: ${{ env.VITE_WEB3FORMS_KEY }}
+
+      # Dijagnostika: da vidimo da dist postoji
+      - name: List dist (diagnostic)
+        run: |
+          echo "root:"
+          ls -lah
+          echo "dist:"
+          ls -lah dist || echo "dist missing!"
 
       - name: Deploy via FTP
-        if: ${{ env.FTP_HOST && env.FTP_USERNAME && env.FTP_PASSWORD }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ env.FTP_HOST }}
-          username: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
-          # port: 21                  # možeš izostaviti (default)
-          protocol: ftp               # ili ftps ako tvoj hosting traži secure
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Ako znaš da je 21, može i bez ovog reda (default je 21)
+          port: ${{ secrets.FTP_PORT }}
+          # Hostinger obično preferira FTPS (explicit):
+          protocol: ftps
           local-dir: dist/
-          server-dir: /   
+          # VAŽNO: postavi tačan put!
+          # Ako je FTP user "zaključan" u public_html, koristi samo "/"
+          # Ako nije zaključan, a deploy ide u glavni domen:
+          server-dir: public_html/
+          log-level: verbose
           timeout: 60000
           state-name: .ftp-deploy-sync.json
