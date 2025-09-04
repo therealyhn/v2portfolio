@@ -6,7 +6,7 @@ export default function Portrait() {
             src={person}
             alt="Portrait"
             className="
-        absolute bottom-[-100px] md:bottom-0
+        absolute bottom-[-90px] md:bottom-0
         left-1/2 -translate-x-1/2 w-[300px] sm:w-[420px] lg:w-[520px]
         max-w-full select-none
         lg:left-1 lg:-translate-x-1/2
