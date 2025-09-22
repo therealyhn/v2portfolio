@@ -54,7 +54,7 @@ const projectsData = [
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
     {
-        id: "jumpnrun",
+        id: "jumpnrunn",
         title: "Madara vs Shinobi Alliance",
         summary: "Classic jump-and-run game featuring custom-designed characters, FPS tracking, speed tracking, and score tracking.",
         longDescription:
