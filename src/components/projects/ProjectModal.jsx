@@ -37,7 +37,7 @@ export default function ProjectModal({ open, onClose, project }) {
     >
       <div
         className="relative w-full max-w-[95vw] sm:max-w-5xl
-               h-[90vh] sm:h-[640px]
+               h-[90vh] sm:h-[750px]
                overflow-hidden rounded-2xl
                bg-white dark:bg-surface text-black ring-1 ring-black/10
                dark:bg-surface-1 dark:text-white dark:ring-white/10
@@ -69,7 +69,7 @@ export default function ProjectModal({ open, onClose, project }) {
                 <img
                   src={src}
                   alt=""
-                  className="w-full h-[200px] sm:h-[360px] object-cover select-none"
+                  className="w-full h-[200px] sm:h-[450px] object-cover select-none"
                   draggable="false"
                 />
               </div>
@@ -117,7 +117,7 @@ export default function ProjectModal({ open, onClose, project }) {
         </div>
 
         {/* Content */}
-        <div className="p-4 sm:p-6 flex-1 overflow-y-auto">
+        <div className="p-4 sm:p-6 flex-1 ">
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_.7fr] gap-6">
             <div>
               <h3 className="font-heading text-xl sm:text-2xl font-semibold">{project.title}</h3>
@@ -128,7 +128,7 @@ export default function ProjectModal({ open, onClose, project }) {
 
             <div className="space-y-4">
               {/* Tags */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 pt-2">
                 {project.tags?.map((t) => (
                   <span
                     key={t}

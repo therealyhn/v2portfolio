@@ -6,9 +6,11 @@ import ComingSoonImg from "../assets/projects/comingsoon.png";
 import Project1Thumbnail from "../assets/projects/project1_thumbnail.jpg";
 import Project1Slide1 from "../assets/projects/project1_slide1.jpg";
 import Project1Slide2 from "../assets/projects/project1_slide2.jpg";
+import Project1Slide3 from "../assets/projects/project1_slide3.jpg";
 import Project2Thumbnail from "../assets/projects/project2_thumbnail.jpg";
 import Project2Slide1 from "../assets/projects/project2_slide1.jpg"
 import Project2Slide2 from "../assets/projects/project2_slide2.jpg"
+import Project2Slide3 from "../assets/projects/project2_slide3.jpg"
 import Project3Thumbnail from "../assets/projects/project3_thumbnail.jpg";
 import Project3Slide1 from "../assets/projects/project3_slide1.jpg"
 import Project3Slide2 from "../assets/projects/project3_slide2.jpg"
@@ -32,7 +34,7 @@ const projectsData = [
             + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
             + "Scalable framework to accommodate client-specific content updates, including text and images.",
         cover: Project1Thumbnail,
-        images: [Project1Slide1, Project1Slide2],
+        images: [Project1Slide1, Project1Slide3, Project1Slide2],
         tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
         links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
     },
@@ -47,7 +49,7 @@ const projectsData = [
             + "Enhanced loading times through optimized code and asset management."
             + "Crafted content and design elements to align with the company’s brand identity and values.",
         cover: Project2Thumbnail,
-        images: [Project2Slide1, Project2Slide2],
+        images: [Project2Slide1, Project2Slide3, Project2Slide2],
         tags: ["React", "TailwindCSS", "Animate.css", "Photoshop"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
