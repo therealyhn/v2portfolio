@@ -65,7 +65,7 @@ const projectsData = [
         cover: Project3Thumbnail,
         images: [Project3Slide1, Project3Slide2],
         tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
-        links: { demo: "https://madara-vs-shinobi-alliance.jovanljusic.com/", github: "https://github.com/therealyhn/madara_vs_alliance" },
+        links: { demo: "https://madara-jumpandrun.jovanljusic.com", github: "https://github.com/therealyhn/madara_vs_alliance" },
     },
 
 
@@ -82,7 +82,7 @@ const projectsData = [
         cover: Project4Thumbnail,
         images: [Project4Slide5, Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4],
         tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
-        links: { demo: "https://djeventplanner.jovanljusic.com/", github: "https://github.com/therealyhn/djeventplanner" },
+        links: { demo: "https://djplanner.jovanljusic.com/", github: "https://github.com/therealyhn/djeventplanner" },
     },
     {
         id: "foto",
