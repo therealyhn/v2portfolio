@@ -26,7 +26,6 @@ import Project5Slide2 from "../assets/projects/project5_slide2.jpg"
 import Project5Slide3 from "../assets/projects/project5_slide3.jpg"
 import Project5Slide4 from "../assets/projects/project5_slide4.jpg"
 import Project5Slide5 from "../assets/projects/project5_slide5.jpg"
-import Project5Slide6 from "../assets/projects/project5_slide6.jpg"
 
 // projekti
 const projectsData = [
@@ -67,7 +66,7 @@ const projectsData = [
             "Built with React, Vite, and Tailwind CSS, using Framer Motion for animations and a lightweight PHP + JSON backend for image upload, edit, delete, and download functionality"
             + "Includes lazy loading, a responsive timeline layout, secure password-protected file managment and automated deployment via GitHub Actions.",
         cover: Project5Thumbnail,
-        images: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5, Project5Slide6],
+        images: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5],
         tags: ["React", "TailwindCSS", "Php", "GitHub Actions"],
         links: { demo: "https://poki-oki.com/", github: "https://github.com/therealyhn/pokiphotogallery" },
     },
