@@ -20,7 +20,13 @@ import Project4Slide1 from "../assets/projects/project4_slide1.jpg"
 import Project4Slide2 from "../assets/projects/project4_slide2.jpg"
 import Project4Slide3 from "../assets/projects/project4_slide3.jpg"
 import Project4Slide4 from "../assets/projects/project4_slide4.jpg"
-
+import Project5Thumbnail from "../assets/projects/project5_thumbnail.jpg";
+import Project5Slide1 from "../assets/projects/project5_slide1.jpg"
+import Project5Slide2 from "../assets/projects/project5_slide2.jpg"
+import Project5Slide3 from "../assets/projects/project5_slide3.jpg"
+import Project5Slide4 from "../assets/projects/project5_slide4.jpg"
+import Project5Slide5 from "../assets/projects/project5_slide5.jpg"
+import Project5Slide6 from "../assets/projects/project5_slide6.jpg"
 
 // projekti
 const projectsData = [
@@ -54,6 +60,18 @@ const projectsData = [
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
     {
+        id: "poki",
+        title: "Olja & Andrija - Live Wedding Gallery",
+        summary: "React-based photo timeline with guest uploads and private access.",
+        longDescription:
+            "Built with React, Vite, and Tailwind CSS, using Framer Motion for animations and a lightweight PHP + JSON backend for image upload, edit, delete, and download functionality"
+            + "Includes lazy loading, a responsive timeline layout, secure password-protected file managment and automated deployment via GitHub Actions.",
+        cover: Project5Thumbnail,
+        images: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5, Project5Slide6],
+        tags: ["React", "TailwindCSS", "Php", "GitHub Actions"],
+        links: { demo: "https://poki-oki.com/", github: "https://github.com/therealyhn/pokiphotogallery" },
+    },
+    {
         id: "jumpnrunn",
         title: "Madara vs Shinobi Alliance",
         summary: "Classic jump-and-run game featuring custom-designed characters, FPS tracking, speed tracking, and score tracking.",
@@ -67,9 +85,6 @@ const projectsData = [
         tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
         links: { demo: "https://madara-jumpandrun.jovanljusic.com", github: "https://github.com/therealyhn/madara_vs_alliance" },
     },
-
-
-    // dodatni projekti za Show More
     {
         id: "planner",
         title: "DJ Event Planner",
