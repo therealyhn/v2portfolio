@@ -17,6 +17,14 @@ export default function HeroButtons() {
       >
         Get in touch
       </a>
+      <a
+        href="/pricing"
+        className="inline-flex items-center gap-2 rounded-lg bg-brand text-white px-5 py-3 font-semibold
+                   hover:bg-brand-600 hover:-translate-y-0.5 transition transform shadow-glow-sm
+                   animate__animated animate__fadeInUp animate__delay-2s"
+      >
+        Pricing <span className="text-lg"></span>
+      </a>
     </div>
   );
 }

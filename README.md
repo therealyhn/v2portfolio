@@ -33,12 +33,3 @@ The site is fully responsive, supports **dark/light mode**, and includes smooth 
 - **Hostinger** (deployment)
 
 ---
-
-## 📦 Installation & Setup
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/yourusername/portfolio-v2.git
-cd portfolio-v2
-npm install

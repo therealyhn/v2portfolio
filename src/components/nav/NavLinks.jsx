@@ -1,9 +1,10 @@
 export default function NavLinks({ onClick }) {
   const links = [
-    { href: "#home", label: "HOME" },
-    { href: "#about", label: "ABOUT ME" },
-    { href: "#projects", label: "PROJECTS" },
-    { href: "#contact", label: "CONTACT" },
+    { href: "/", label: "HOME" },          // uvek vodi na root
+    { href: "/#about", label: "ABOUT ME" },
+    { href: "/#projects", label: "PROJECTS" },
+    { href: "/#contact", label: "CONTACT" },
+    { href: "/pricing", label: "PRICING" }
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function NavLinks({ onClick }) {
         </li>
       ))}
 
-      {/* CV */}
+      {/* Direktan download CV-a iz public/ foldera */}
       <li onClick={onClick}>
         <a
           href="/Jovan_Ljusic_CV_eng.pdf"
@@ -36,9 +37,9 @@ export default function NavLinks({ onClick }) {
             className="pointer-events-none absolute left-0 -bottom-1 h-[3px] w-0
               bg-gradient-to-r from-brand to-brand-600 rounded-full
               transition-all duration-300 group-hover:w-full"
-          />
-        </a>
-      </li>
+            />
+          </a>
+        </li>
     </ul>
   );
 }
