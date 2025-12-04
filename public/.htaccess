@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Ako je fajl (postoji fizički) – posluži ga normalno
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# U suprotnom, sve prebaci na index.html (React app)
+RewriteRule . /index.html [L]

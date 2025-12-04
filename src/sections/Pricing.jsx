@@ -10,7 +10,7 @@ export default function Pricing() {
                 {/* Naslov */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl font-heading font-bold">
-                        Pricing Plans
+                        Freelance Pricing Plans
                     </h2>
                     <p className="mt-3 text-sm sm:text-base text-muted-2 dark:text-white/70 max-w-2xl mx-auto">
                         Cene zavise od obima i kompleksnosti projekta. Ovi paketi su
