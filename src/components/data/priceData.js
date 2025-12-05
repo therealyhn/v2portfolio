@@ -26,6 +26,7 @@ export const pricingPlans = [
       features: [
         "Sve iz BASIC plana",
         "4–7 stranica (Home, Usluge, Portfolio, Galerija, Booking, Kontakt…)",
+        "CMS (Admin Dashboard) – klijent sam menja sadržaj sajta",
         "Animacije (Animate.css / custom micro interactions)",
         "Napredna galerija ili slider (Swiper)",
         "Booking forma sa validacijom",
@@ -44,7 +45,6 @@ export const pricingPlans = [
         "Potpuno custom rešenje sa CMS-om, višestranim jezikom i naprednim funkcionalnostima.",
       features: [
         "Sve iz STANDARD plana",
-        "CMS (Admin Dashboard) – klijent sam menja sadržaj sajta",
         "Napredan dizajn i custom animacije",
         "Napredna SEO optimizacija",
         "Napredni booking sa slanjem maila + kalkulacija cena",

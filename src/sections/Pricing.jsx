@@ -10,7 +10,7 @@ export default function Pricing() {
                 {/* Naslov */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl font-heading font-bold">
-                        Freelance Pricing Plans
+                        Freelance Pricing Plans 
                     </h2>
                     <p className="mt-3 text-sm sm:text-base text-muted-2 dark:text-white/70 max-w-2xl mx-auto">
                         Cene zavise od obima i kompleksnosti projekta. Ovi paketi su
@@ -90,18 +90,20 @@ export default function Pricing() {
                     </p>
                 </div>
                 <div className="mt-14 flex justify-center">
-                    <p className="text-sm sm:text-xl text-center text-muted-2 dark:text-white/80 max-w-xl">
-                        Popunite formu ispod ili me kontaktirajte putem{" "}
-                        <a
-                            href="https://www.instagram.com/jovanljusic_asdf/"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="font-medium text-brand hover:text-brand/80 underline underline-offset-4"
-                        >
-                            Instagrama
-                        </a>
-                        .
-                    </p>
+                    <div className="border border-gray-200 dark:border-surface-3 rounded-xl px-6 py-5 bg-white/70 dark:bg-surface-2/70 shadow-sm max-w-xl w-full">
+                        <p className="text-sm sm:text-xl text-center text-muted-2 dark:text-white/80">
+                            Popunite formu ispod ili me kontaktirajte putem{" "}
+                            <a
+                                href="https://www.instagram.com/jovanljusic_asdf/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="font-medium text-brand hover:text-brand/80 underline underline-offset-4"
+                            >
+                                Instagrama
+                            </a>
+                            .
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
