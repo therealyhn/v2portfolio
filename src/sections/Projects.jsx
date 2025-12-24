@@ -11,6 +11,8 @@ import Project2Thumbnail from "../assets/projects/project2_thumbnail.jpg";
 import Project2Slide1 from "../assets/projects/project2_slide1.jpg"
 import Project2Slide2 from "../assets/projects/project2_slide2.jpg"
 import Project2Slide3 from "../assets/projects/project2_slide3.jpg"
+import Project2Slide4 from "../assets/projects/project2_slide4.jpg"
+import Project2Slide5 from "../assets/projects/project2_slide5.jpg"
 import Project3Thumbnail from "../assets/projects/project3_thumbnail.jpg";
 import Project3Slide1 from "../assets/projects/project3_slide1.jpg"
 import Project3Slide2 from "../assets/projects/project3_slide2.jpg"
@@ -54,7 +56,7 @@ const projectsData = [
             + "Enhanced loading times through optimized code and asset management."
             + "Crafted content and design elements to align with the company’s brand identity and values.",
         cover: Project2Thumbnail,
-        images: [Project2Slide1, Project2Slide3, Project2Slide2],
+        images: [Project2Slide1, Project2Slide3, Project2Slide2, Project2Slide4, Project2Slide5],
         tags: ["React", "TailwindCSS", "Animate.css", "Photoshop"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
