@@ -28,22 +28,32 @@ import Project5Slide2 from "../assets/projects/project5_slide2.jpg"
 import Project5Slide3 from "../assets/projects/project5_slide3.jpg"
 import Project5Slide4 from "../assets/projects/project5_slide4.jpg"
 import Project5Slide5 from "../assets/projects/project5_slide5.jpg"
+import Project6Thumbnail from "../assets/projects/project6_thumbnail.jpg";
+import Project6Slide1 from "../assets/projects/project6_slide1.jpg"
+import Project6Slide2 from "../assets/projects/project6_slide2.jpg"
+import Project6Slide3 from "../assets/projects/project6_slide3.jpg"
+import Project6Slide4 from "../assets/projects/project6_slide4.jpg"
+import Project6Slide5 from "../assets/projects/project6_slide5.jpg"
+import Project6Slide6 from "../assets/projects/project6_slide6.jpg"
+import Project6Slide7 from "../assets/projects/project6_slide7.jpg"
+
 
 // projekti
 const projectsData = [
     {
-        id: "barber-mane",
-        title: "Mane's Barbershop",
-        summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
+        id: "xty-music",
+        title: "X T Y - Music",
+        summary: "XTY is a modern, performance-focused single-page website designed for DJ bookings and showcasing mixes & mashups.",
         longDescription:
-            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
-            + "Intuitive navigation and integrated animate.css for smooth animations. "
-            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
+            "A premium, high-performance portfolio and booking platform for the DJ duo X T Y (YHN & TODOS) built with React, Vite, and Sanity CMS "
+            + "Custom-built audio player specifically designed for showcasing unique mashups."
+            + "A premium 'Editorial' booking interface with three distinct managed options. High-performance lightbox for fullscreen viewing."
+            + "Interactive image gallery organized by event categories."
             + "Scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: Project1Thumbnail,
-        images: [Project1Slide1, Project1Slide3, Project1Slide2],
-        tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
-        links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
+        cover: Project6Thumbnail,
+        images: [Project6Slide1, Project6Slide2, Project6Slide3, Project6Slide4, Project6Slide5, Project6Slide6, Project6Slide7],
+        tags: ["React", "Vite", "TailwindCSS", "Sanity CMS", "TailwindCSS", "Animate.css"],
+        links: { demo: "https://xty-music.com", github: "https://github.com/therealyhn/ljusa-todos" },
     },
     {
         id: "roksped",
@@ -57,8 +67,22 @@ const projectsData = [
             + "Crafted content and design elements to align with the company’s brand identity and values.",
         cover: Project2Thumbnail,
         images: [Project2Slide1, Project2Slide3, Project2Slide2, Project2Slide4, Project2Slide5],
-        tags: ["React", "TailwindCSS", "Animate.css", "Photoshop"],
+        tags: ["React", "TailwindCSS", "Animate.css", "Photoshop", "Sanity CMS"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
+    },
+    {
+        id: "barber-mane",
+        title: "Mane's Barbershop",
+        summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
+        longDescription:
+            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
+            + "Intuitive navigation and integrated animate.css for smooth animations. "
+            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
+            + "Scalable framework to accommodate client-specific content updates, including text and images.",
+        cover: Project1Thumbnail,
+        images: [Project1Slide1, Project1Slide3, Project1Slide2],
+        tags: ["React", "Vite", "TailwindCSS", "Animate.css", "Sanity CMS"],
+        links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
     },
     {
         id: "poki",
@@ -71,6 +95,20 @@ const projectsData = [
         images: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5],
         tags: ["React", "TailwindCSS", "Php", "GitHub Actions"],
         links: { demo: "https://poki-oki.com/", github: "https://github.com/therealyhn/pokiphotogallery" },
+    },
+    {
+        id: "foto2",
+        title: "Aleksandar Jovanović Photography Website",
+        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
+        longDescription:
+            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
+            + "Lorem ipsum dolor sit amet."
+            + "Testing lorem ipsum."
+            + "Test Test Test.",
+        cover: ComingSoonImg,
+        images: [ComingSoonImg, ComingSoonImg],
+        tags: ["React", "Vite", "Tailwind", "Animate.css"],
+        links: { demo: "#", github: "#" },
     },
     {
         id: "jumpnrunn",
@@ -112,20 +150,6 @@ const projectsData = [
         cover: ComingSoonImg,
         images: [ComingSoonImg, ComingSoonImg],
         tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
-        links: { demo: "#", github: "#" },
-    },
-    {
-        id: "foto2",
-        title: "Aleksandar Jovanović Photography Website",
-        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
-        longDescription:
-            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
-            + "Lorem ipsum dolor sit amet."
-            + "Testing lorem ipsum."
-            + "Test Test Test.",
-        cover: ComingSoonImg,
-        images: [ComingSoonImg, ComingSoonImg],
-        tags: ["React", "Vite", "Tailwind", "Animate.css"],
         links: { demo: "#", github: "#" },
     },
 ];
