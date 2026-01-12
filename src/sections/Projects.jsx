@@ -36,6 +36,12 @@ import Project6Slide4 from "../assets/projects/project6_slide4.jpg"
 import Project6Slide5 from "../assets/projects/project6_slide5.jpg"
 import Project6Slide6 from "../assets/projects/project6_slide6.jpg"
 import Project6Slide7 from "../assets/projects/project6_slide7.jpg"
+import Project7Thumbnail from "../assets/projects/project7_thumbnail.jpg";
+import Project7Slide1 from "../assets/projects/project7_slide1.jpg"
+import Project7Slide2 from "../assets/projects/project7_slide2.jpg"
+import Project7Slide3 from "../assets/projects/project7_slide3.jpg"
+import Project7Slide4 from "../assets/projects/project7_slide4.jpg"
+import Project7Slide5 from "../assets/projects/project7_slide5.jpg"
 
 
 // projekti
@@ -71,18 +77,18 @@ const projectsData = [
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
     },
     {
-        id: "barber-mane",
-        title: "Mane's Barbershop",
-        summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
+        id: "foto2",
+        title: "AJCreative",
+        summary: "Professional portfolio website for photographer & graphic designer Aleksandar Jovanović. Fully responsive, optimized, and integrated with Sanity CMS.",
         longDescription:
-            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
-            + "Intuitive navigation and integrated animate.css for smooth animations. "
-            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
-            + "Scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: Project1Thumbnail,
-        images: [Project1Slide1, Project1Slide3, Project1Slide2],
-        tags: ["React", "Vite", "TailwindCSS", "Animate.css", "Sanity CMS"],
-        links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
+            "A modern, elegant, and fully responsive portfolio website built for professional photographer & graphic designer Aleksandar Jovanović."
+            + "Portfolio Categories: Each category contains multiple works (photos), Click a category to open a fullscreen modal gallery."
+            + "Modern blog style layout in a Swiper carousel, Supports unlimited posts (Sanity-ready)."
+            + "Secure, backend-free form handling, .env protected API key, Validations, error handling, and success feedback.",
+        cover: Project7Thumbnail,
+        images: [Project7Slide1, Project7Slide2, Project7Slide3, Project7Slide4, Project7Slide5],
+        tags: ["React", "Vite", "Tailwind", "Animate.css"],
+        links: { demo: "https://ajcreative-cva.com/", github: "https://github.com/therealyhn/aca_portfolio" },
     },
     {
         id: "poki",
@@ -97,18 +103,18 @@ const projectsData = [
         links: { demo: "https://poki-oki.com/", github: "https://github.com/therealyhn/pokiphotogallery" },
     },
     {
-        id: "foto2",
-        title: "Aleksandar Jovanović Photography Website",
-        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
+        id: "barber-mane",
+        title: "Mane's Barbershop",
+        summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
         longDescription:
-            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
-            + "Lorem ipsum dolor sit amet."
-            + "Testing lorem ipsum."
-            + "Test Test Test.",
-        cover: ComingSoonImg,
-        images: [ComingSoonImg, ComingSoonImg],
-        tags: ["React", "Vite", "Tailwind", "Animate.css"],
-        links: { demo: "#", github: "#" },
+            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
+            + "Intuitive navigation and integrated animate.css for smooth animations. "
+            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
+            + "Scalable framework to accommodate client-specific content updates, including text and images.",
+        cover: Project1Thumbnail,
+        images: [Project1Slide1, Project1Slide3, Project1Slide2],
+        tags: ["React", "Vite", "TailwindCSS", "Animate.css", "Sanity CMS"],
+        links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
     },
     {
         id: "jumpnrunn",
