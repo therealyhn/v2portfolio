@@ -87,7 +87,7 @@ const projectsData = [
             + "Secure, backend-free form handling, .env protected API key, Validations, error handling, and success feedback.",
         cover: Project7Thumbnail,
         images: [Project7Slide1, Project7Slide2, Project7Slide3, Project7Slide4, Project7Slide5],
-        tags: ["React", "Vite", "Tailwind", "Animate.css"],
+        tags: ["React", "Vite", "Tailwind", "Animate.css", "Sanity CMS"],
         links: { demo: "https://ajcreative-cva.com/", github: "https://github.com/therealyhn/aca_portfolio" },
     },
     {
