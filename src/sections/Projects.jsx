@@ -62,6 +62,20 @@ const projectsData = [
         links: { demo: "https://xty-music.com", github: "https://github.com/therealyhn/ljusa-todos" },
     },
     {
+        id: "foto2",
+        title: "AJCreative",
+        summary: "Professional portfolio website for photographer & graphic designer Aleksandar Jovanović. Fully responsive, optimized, and integrated with Sanity CMS.",
+        longDescription:
+            "A modern, elegant, and fully responsive portfolio website built for professional photographer & graphic designer Aleksandar Jovanović."
+            + "Portfolio Categories: Each category contains multiple works (photos), Click a category to open a fullscreen modal gallery."
+            + "Modern blog style layout in a Swiper carousel, Supports unlimited posts (Sanity-ready)."
+            + "Secure, backend-free form handling, .env protected API key, Validations, error handling, and success feedback.",
+        cover: Project7Thumbnail,
+        images: [Project7Slide1, Project7Slide2, Project7Slide3, Project7Slide4, Project7Slide5],
+        tags: ["React", "Vite", "Tailwind", "Animate.css", "Sanity CMS"],
+        links: { demo: "https://ajcreative-cva.com/", github: "https://github.com/therealyhn/aca_portfolio" },
+    },
+    {
         id: "roksped",
         title: "Rok Šped Plus D.O.O",
         summary: "Redesigned a Freight Forwarding and Transport Company website with a modern, responsive layout and interactive features.",
@@ -75,20 +89,6 @@ const projectsData = [
         images: [Project2Slide1, Project2Slide3, Project2Slide2, Project2Slide4, Project2Slide5],
         tags: ["React", "TailwindCSS", "Animate.css", "Photoshop", "Sanity CMS"],
         links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
-    },
-    {
-        id: "foto2",
-        title: "AJCreative",
-        summary: "Professional portfolio website for photographer & graphic designer Aleksandar Jovanović. Fully responsive, optimized, and integrated with Sanity CMS.",
-        longDescription:
-            "A modern, elegant, and fully responsive portfolio website built for professional photographer & graphic designer Aleksandar Jovanović."
-            + "Portfolio Categories: Each category contains multiple works (photos), Click a category to open a fullscreen modal gallery."
-            + "Modern blog style layout in a Swiper carousel, Supports unlimited posts (Sanity-ready)."
-            + "Secure, backend-free form handling, .env protected API key, Validations, error handling, and success feedback.",
-        cover: Project7Thumbnail,
-        images: [Project7Slide1, Project7Slide2, Project7Slide3, Project7Slide4, Project7Slide5],
-        tags: ["React", "Vite", "Tailwind", "Animate.css", "Sanity CMS"],
-        links: { demo: "https://ajcreative-cva.com/", github: "https://github.com/therealyhn/aca_portfolio" },
     },
     {
         id: "poki",
