@@ -36,6 +36,7 @@ import Project6Slide4 from "../assets/projects/project6_slide4.jpg"
 import Project6Slide5 from "../assets/projects/project6_slide5.jpg"
 import Project6Slide6 from "../assets/projects/project6_slide6.jpg"
 import Project6Slide7 from "../assets/projects/project6_slide7.jpg"
+import Project6Slide8 from "../assets/projects/project6_slide8.jpg"
 import Project7Thumbnail from "../assets/projects/project7_thumbnail.jpg";
 import Project7Slide1 from "../assets/projects/project7_slide1.jpg"
 import Project7Slide2 from "../assets/projects/project7_slide2.jpg"
@@ -57,7 +58,7 @@ const projectsData = [
             + "Interactive image gallery organized by event categories."
             + "Scalable framework to accommodate client-specific content updates, including text and images.",
         cover: Project6Thumbnail,
-        images: [Project6Slide1, Project6Slide2, Project6Slide3, Project6Slide4, Project6Slide5, Project6Slide6, Project6Slide7],
+        images: [Project6Slide1, Project6Slide2, Project6Slide3, Project6Slide4, Project6Slide5, Project6Slide6, Project6Slide7, Project6Slide8],
         tags: ["React", "Vite", "TailwindCSS", "Sanity CMS", "TailwindCSS", "Animate.css"],
         links: { demo: "https://xty-music.com", github: "https://github.com/therealyhn/ljusa-todos" },
     },
