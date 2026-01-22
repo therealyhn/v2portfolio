@@ -39,7 +39,7 @@ export default function App() {
           />
 
           {/* Posebna stranica samo za cenovnik */}
-          <Route
+          {/* <Route
             path="/pricing"
             element={
               <>
@@ -48,7 +48,7 @@ export default function App() {
                 <Footer />
               </>
             }
-          />
+          /> */}
         </Routes>
       </Suspense>
     </div>
