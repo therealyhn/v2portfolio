@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import useScrollLock from "../../hooks/useScrollLock";
+import { urlFor } from "../../lib/sanityImage";
 
 function IconExternal({ className = "w-4 h-4" }) {
   return (
@@ -13,6 +14,8 @@ function IconExternal({ className = "w-4 h-4" }) {
 export default function ProjectModal({ open, onClose, project }) {
   const [index, setIndex] = useState(0);
   const slides = project?.images || [];
+  const hasSlides = slides.length > 0;
+  const canNavigate = slides.length > 1;
 
   // lock scroll + ESC
   useScrollLock(open, onClose);
@@ -24,8 +27,14 @@ export default function ProjectModal({ open, onClose, project }) {
 
   if (!open || !project) return null;
 
-  const next = () => setIndex((i) => (i + 1) % slides.length);
-  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
+  const next = () => {
+    if (!canNavigate) return;
+    setIndex((i) => (i + 1) % slides.length);
+  };
+  const prev = () => {
+    if (!canNavigate) return;
+    setIndex((i) => (i - 1 + slides.length) % slides.length);
+  };
 
   return (
     <div
@@ -60,24 +69,39 @@ export default function ProjectModal({ open, onClose, project }) {
 
         {/* Slider */}
         <div className="relative bg-white/70 dark:bg-black/20 flex-shrink-0">
-          <div
-            className="flex transition-transform duration-500"
-            style={{ transform: `translateX(-${index * 100}%)` }}
-          >
-            {slides.map((src, i) => (
-              <div key={i} className="w-full shrink-0">
-                <img
-                  src={src}
-                  alt=""
-                  className="w-full h-[200px] sm:h-[450px] object-cover select-none"
-                  draggable="false"
-                />
-              </div>
-            ))}
-          </div>
+          {hasSlides ? (
+            <div
+              className="flex transition-transform duration-500"
+              style={{ transform: `translateX(-${index * 100}%)` }}
+            >
+              {slides.map((img, i) => (
+                <div key={i} className="w-full shrink-0">
+                  <img
+                    src={urlFor(img).width(1600).height(900).fit("max").auto("format").url()}
+                    srcSet={[
+                      urlFor(img).width(800).height(450).fit("max").auto("format").url() + " 800w",
+                      urlFor(img).width(1200).height(675).fit("max").auto("format").url() + " 1200w",
+                      urlFor(img).width(1600).height(900).fit("max").auto("format").url() + " 1600w",
+                      urlFor(img).width(2000).height(1125).fit("max").auto("format").url() + " 2000w",
+                    ].join(", ")}
+                    sizes="(min-width: 1024px) 70vw, 100vw"
+                    alt=""
+                    className="w-full h-[200px] sm:h-[450px] object-cover select-none"
+                    draggable="false"
+                    loading={i === index ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex h-[200px] sm:h-[450px] items-center justify-center bg-black/5 text-xs text-gray-600 dark:bg-white/5 dark:text-white/60">
+              No images available
+            </div>
+          )}
 
           {/* Prev/Next */}
-          {slides.length > 1 && (
+          {canNavigate && (
             <>
               <button
                 onClick={prev}

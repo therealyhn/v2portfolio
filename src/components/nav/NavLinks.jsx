@@ -6,7 +6,7 @@ export default function NavLinks({ onClick }) {
     { to: "/#about", label: "ABOUT ME" },
     { to: "/#projects", label: "PROJECTS" },
     { to: "/#contact", label: "CONTACT" },
-    { to: "/pricing", label: "PRICING" },
+    // { to: "/pricing", label: "PRICING" },
   ];
 
   return (

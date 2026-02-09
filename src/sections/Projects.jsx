@@ -1,165 +1,8 @@
-import { useMemo, useRef, useState } from "react";
+﻿import { useMemo, useRef, useState } from "react";
 import SectionHeader from "../components/projects/SectionHeader";
 import ProjectsGrid from "../components/projects/ProjectGrid";
 import ProjectModal from "../components/projects/ProjectModal";
-import ComingSoonImg from "../assets/projects/comingsoon.png";
-import Project1Thumbnail from "../assets/projects/project1_thumbnail.jpg";
-import Project1Slide1 from "../assets/projects/project1_slide1.jpg";
-import Project1Slide2 from "../assets/projects/project1_slide2.jpg";
-import Project1Slide3 from "../assets/projects/project1_slide3.jpg";
-import Project2Thumbnail from "../assets/projects/project2_thumbnail.jpg";
-import Project2Slide1 from "../assets/projects/project2_slide1.jpg"
-import Project2Slide2 from "../assets/projects/project2_slide2.jpg"
-import Project2Slide3 from "../assets/projects/project2_slide3.jpg"
-import Project2Slide4 from "../assets/projects/project2_slide4.jpg"
-import Project2Slide5 from "../assets/projects/project2_slide5.jpg"
-import Project3Thumbnail from "../assets/projects/project3_thumbnail.jpg";
-import Project3Slide1 from "../assets/projects/project3_slide1.jpg"
-import Project3Slide2 from "../assets/projects/project3_slide2.jpg"
-import Project4Thumbnail from "../assets/projects/project4_thumbnail.jpg";
-import Project4Slide5 from "../assets/projects/project4_slide5.jpg"
-import Project4Slide1 from "../assets/projects/project4_slide1.jpg"
-import Project4Slide2 from "../assets/projects/project4_slide2.jpg"
-import Project4Slide3 from "../assets/projects/project4_slide3.jpg"
-import Project4Slide4 from "../assets/projects/project4_slide4.jpg"
-import Project5Thumbnail from "../assets/projects/project5_thumbnail.jpg";
-import Project5Slide1 from "../assets/projects/project5_slide1.jpg"
-import Project5Slide2 from "../assets/projects/project5_slide2.jpg"
-import Project5Slide3 from "../assets/projects/project5_slide3.jpg"
-import Project5Slide4 from "../assets/projects/project5_slide4.jpg"
-import Project5Slide5 from "../assets/projects/project5_slide5.jpg"
-import Project6Thumbnail from "../assets/projects/project6_thumbnail.jpg";
-import Project6Slide1 from "../assets/projects/project6_slide1.jpg"
-import Project6Slide2 from "../assets/projects/project6_slide2.jpg"
-import Project6Slide3 from "../assets/projects/project6_slide3.jpg"
-import Project6Slide4 from "../assets/projects/project6_slide4.jpg"
-import Project6Slide5 from "../assets/projects/project6_slide5.jpg"
-import Project6Slide6 from "../assets/projects/project6_slide6.jpg"
-import Project6Slide7 from "../assets/projects/project6_slide7.jpg"
-import Project6Slide8 from "../assets/projects/project6_slide8.jpg"
-import Project7Thumbnail from "../assets/projects/project7_thumbnail.jpg";
-import Project7Slide1 from "../assets/projects/project7_slide1.jpg"
-import Project7Slide2 from "../assets/projects/project7_slide2.jpg"
-import Project7Slide3 from "../assets/projects/project7_slide3.jpg"
-import Project7Slide4 from "../assets/projects/project7_slide4.jpg"
-import Project7Slide5 from "../assets/projects/project7_slide5.jpg"
-
-
-// projekti
-const projectsData = [
-    {
-        id: "xty-music",
-        title: "X T Y - Music",
-        summary: "XTY is a modern, performance-focused single-page website designed for DJ bookings and showcasing mixes & mashups.",
-        longDescription:
-            "A premium, high-performance portfolio and booking platform for the DJ duo X T Y (YHN & TODOS) built with React, Vite, and Sanity CMS "
-            + "Custom-built audio player specifically designed for showcasing unique mashups."
-            + "A premium 'Editorial' booking interface with three distinct managed options. High-performance lightbox for fullscreen viewing."
-            + "Interactive image gallery organized by event categories."
-            + "Scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: Project6Thumbnail,
-        images: [Project6Slide1, Project6Slide2, Project6Slide3, Project6Slide4, Project6Slide5, Project6Slide6, Project6Slide7, Project6Slide8],
-        tags: ["React", "Vite", "TailwindCSS", "Sanity CMS", "TailwindCSS", "Animate.css"],
-        links: { demo: "https://xty-music.com", github: "https://github.com/therealyhn/ljusa-todos" },
-    },
-    {
-        id: "foto2",
-        title: "AJCreative",
-        summary: "Professional portfolio website for photographer & graphic designer Aleksandar Jovanović. Fully responsive, optimized, and integrated with Sanity CMS.",
-        longDescription:
-            "A modern, elegant, and fully responsive portfolio website built for professional photographer & graphic designer Aleksandar Jovanović."
-            + "Portfolio Categories: Each category contains multiple works (photos), Click a category to open a fullscreen modal gallery."
-            + "Modern blog style layout in a Swiper carousel, Supports unlimited posts (Sanity-ready)."
-            + "Secure, backend-free form handling, .env protected API key, Validations, error handling, and success feedback.",
-        cover: Project7Thumbnail,
-        images: [Project7Slide1, Project7Slide2, Project7Slide3, Project7Slide4, Project7Slide5],
-        tags: ["React", "Vite", "Tailwind", "Animate.css", "Sanity CMS"],
-        links: { demo: "https://ajcreative-cva.com/", github: "https://github.com/therealyhn/aca_portfolio" },
-    },
-    {
-        id: "roksped",
-        title: "Rok Šped Plus D.O.O",
-        summary: "Redesigned a Freight Forwarding and Transport Company website with a modern, responsive layout and interactive features.",
-        longDescription:
-            "Designed a modern, responsive, and interactive website for a freight forwarding and transport company. "
-            + "Developed a mobile-friendly layout optimized for all devices to ensure a seamless user experience."
-            + "Integrated a functional contact form to streamline client communication."
-            + "Enhanced loading times through optimized code and asset management."
-            + "Crafted content and design elements to align with the company’s brand identity and values.",
-        cover: Project2Thumbnail,
-        images: [Project2Slide1, Project2Slide3, Project2Slide2, Project2Slide4, Project2Slide5],
-        tags: ["React", "TailwindCSS", "Animate.css", "Photoshop", "Sanity CMS"],
-        links: { demo: "https://roksped.rs", github: "https://github.com/therealyhn/rokspedv2" },
-    },
-    {
-        id: "poki",
-        title: "Olja & Andrija - Live Wedding Gallery",
-        summary: "React-based photo timeline with guest uploads and private access.",
-        longDescription:
-            "Built with React, Vite, and Tailwind CSS, using Framer Motion for animations and a lightweight PHP + JSON backend for image upload, edit, delete, and download functionality"
-            + "Includes lazy loading, a responsive timeline layout, secure password-protected file managment and automated deployment via GitHub Actions.",
-        cover: Project5Thumbnail,
-        images: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5],
-        tags: ["React", "TailwindCSS", "Php", "GitHub Actions"],
-        links: { demo: "https://poki-oki.com/", github: "https://github.com/therealyhn/pokiphotogallery" },
-    },
-    {
-        id: "barber-mane",
-        title: "Mane's Barbershop",
-        summary: "Website for a local up-and-coming barbershop featuring online booking, service menu, gallery, and customer reviews.",
-        longDescription:
-            "Modern, responsive website for a local barbershop using React, Vite and Tailwind CSS. "
-            + "Intuitive navigation and integrated animate.css for smooth animations. "
-            + "Detailed booking form, allowing customers to schedule appointments by selecting services (e.g., classic cut, fade, beard trim), entering their name, phone number, preferred date, and time, with a user-friendly design optimized for all devices."
-            + "Scalable framework to accommodate client-specific content updates, including text and images.",
-        cover: Project1Thumbnail,
-        images: [Project1Slide1, Project1Slide3, Project1Slide2],
-        tags: ["React", "Vite", "TailwindCSS", "Animate.css", "Sanity CMS"],
-        links: { demo: "https://manemuskifrizer.com", github: "https://github.com/therealyhn/mane-barbershop" },
-    },
-    {
-        id: "jumpnrunn",
-        title: "Madara vs Shinobi Alliance",
-        summary: "Classic jump-and-run game featuring custom-designed characters, FPS tracking, speed tracking, and score tracking.",
-        longDescription:
-            "One of my first projects, a classic jump-and-run game. Features custom-designed characters."
-            + "Includes tracking for FPS, speed, and score."
-            + "Offers smooth controls and challenging tasks."
-            + "Showcases a unique visual style, bringing a fresh take to the traditional genre.",
-        cover: Project3Thumbnail,
-        images: [Project3Slide1, Project3Slide2],
-        tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
-        links: { demo: "https://madara-jumpandrun.jovanljusic.com", github: "https://github.com/therealyhn/madara_vs_alliance" },
-    },
-    {
-        id: "planner",
-        title: "DJ Event Planner",
-        summary: "Responsive DJ event planner web app that allows users to track, add, edit, and delete events. Features include a toggleable calendar view, live event updates, and local storage.",
-        longDescription:
-            "Allows users to track, add, edit, and delete events."
-            + "Includes a toggleable calendar view for easier event management."
-            + "Provides real-time updates for immediate changes."
-            + "Utilizes local storage for persistent data across sessions.",
-        cover: Project4Thumbnail,
-        images: [Project4Slide5, Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4],
-        tags: ["HTML", "CSS", "JavaScript", "Photoshop"],
-        links: { demo: "https://djplanner.jovanljusic.com/", github: "https://github.com/therealyhn/djeventplanner" },
-    },
-    {
-        id: "foto",
-        title: "Nikola Petković Photography Website",
-        summary: "Responsive portfolio website for a photographer, showcasing their work, services, and contact information.",
-        longDescription:
-            "Responsive portfolio website for a photographer, showcasing their work, services, and contact information."
-            + "Lorem ipsum dolor sit amet."
-            + "Testing lorem ipsum."
-            + "Test Test Test.",
-        cover: ComingSoonImg,
-        images: [ComingSoonImg, ComingSoonImg],
-        tags: ["React", "Vite", "TailwindCSS", "Animate.css"],
-        links: { demo: "#", github: "#" },
-    },
-];
+import useProjects from "../hooks/useProjects";
 
 export default function ProjectsSection() {
     const [showMore, setShowMore] = useState(false);
@@ -167,12 +10,13 @@ export default function ProjectsSection() {
     const [active, setActive] = useState(null);
 
     const sectionRef = useRef(null);
+    const { projects, loading, error } = useProjects();
 
     const { primary, extra } = useMemo(() => {
-        const first = projectsData.slice(0, 3);
-        const rest = projectsData.slice(3);
+        const first = projects.slice(0, 3);
+        const rest = projects.slice(3);
         return { primary: first, extra: rest };
-    }, []);
+    }, [projects]);
 
     const openModal = (project) => {
         setActive(project);
@@ -182,7 +26,7 @@ export default function ProjectsSection() {
     const toggleMore = () => {
         if (showMore) {
             setShowMore(false);
-            // skroluj nazad na vrh sekcije kad zatvaramo
+            // scroll back to section top when closing
             requestAnimationFrame(() => {
                 sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
             });
@@ -200,20 +44,42 @@ export default function ProjectsSection() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <SectionHeader lead="Featured" accent="Projects" />
 
-                {/* Prva 3 projekta */}
-                <div className="mt-12">
-                    <ProjectsGrid projects={primary} onOpen={openModal} />
-                </div>
-
-                {/* Dodatni projekti (jedina lokacija!) */}
-                {showMore && extra.length > 0 && (
-                    <div id="extra-projects" className="mt-8">
-                        <ProjectsGrid projects={extra} onOpen={openModal} />
-                    </div>
+                {loading && (
+                    <p className="mt-12 text-sm text-gray-700 dark:text-white/70">
+                        Loading projects...
+                    </p>
                 )}
 
-                {/* Dugme uvek poslednje */}
-                {extra.length > 0 && (
+                {error && (
+                    <p className="mt-12 text-sm text-red-600 dark:text-red-400">
+                        Failed to load projects.
+                    </p>
+                )}
+
+                {!loading && !error && projects.length === 0 && (
+                    <p className="mt-12 text-sm text-gray-700 dark:text-white/70">
+                        No projects yet.
+                    </p>
+                )}
+
+                {!loading && !error && projects.length > 0 && (
+                    <>
+                        {/* First 3 projects */}
+                        <div className="mt-12">
+                            <ProjectsGrid projects={primary} onOpen={openModal} />
+                        </div>
+
+                        {/* Extra projects (single location) */}
+                        {showMore && extra.length > 0 && (
+                            <div id="extra-projects" className="mt-8">
+                                <ProjectsGrid projects={extra} onOpen={openModal} />
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {/* Button always last */}
+                {!loading && !error && extra.length > 0 && (
                     <div className="mt-8 text-center">
                         <button
                             onClick={toggleMore}

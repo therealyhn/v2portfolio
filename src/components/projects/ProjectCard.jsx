@@ -1,4 +1,5 @@
 import Tag from "./Tag";
+import { urlFor } from "../../lib/sanityImage";
 
 function IconExternal({ className = "w-4 h-4" }) {
     return (
@@ -29,12 +30,25 @@ export default function ProjectCard({ project, onOpen }) {
                 className="relative block w-full overflow-hidden"
                 aria-label={`Open details for ${project.title}`}
             >
-                <img
-                    src={project.cover}
-                    alt={project.title}
-                    loading="lazy"
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-                />
+                {project.coverImage ? (
+                    <img
+                        src={urlFor(project.coverImage).width(720).height(480).fit("crop").auto("format").url()}
+                        srcSet={[
+                            urlFor(project.coverImage).width(480).height(320).fit("crop").auto("format").url() + " 480w",
+                            urlFor(project.coverImage).width(720).height(480).fit("crop").auto("format").url() + " 720w",
+                            urlFor(project.coverImage).width(960).height(640).fit("crop").auto("format").url() + " 960w",
+                        ].join(", ")}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                    />
+                ) : (
+                    <div className="flex h-48 w-full items-center justify-center bg-black/5 text-xs text-gray-600 dark:bg-white/5 dark:text-white/60">
+                        No image
+                    </div>
+                )}
             </button>
 
             <div className="p-6">
@@ -43,11 +57,13 @@ export default function ProjectCard({ project, onOpen }) {
                     {project.summary}
                 </p>
 
-                <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((t) => (
-                        <Tag key={t}>{t}</Tag>
-                    ))}
-                </div>
+                {project.tags?.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                        {project.tags.map((t) => (
+                            <Tag key={t}>{t}</Tag>
+                        ))}
+                    </div>
+                )}
 
                 <div className="mt-5 flex items-center justify-between text-sm">
 
