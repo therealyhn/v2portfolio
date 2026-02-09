@@ -1,7 +1,7 @@
 import { createClient } from "@sanity/client";
 
-const projectId = import.meta.env.VITE_SANITY_PROJECT_ID;
-const dataset = import.meta.env.VITE_SANITY_DATASET;
+const projectId = import.meta.env.VITE_SANITY_PROJECT_ID || "va67sdm9";
+const dataset = import.meta.env.VITE_SANITY_DATASET || "production";
 
 if (!projectId || !dataset) {
   // eslint-disable-next-line no-console
