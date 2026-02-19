@@ -141,7 +141,7 @@ export default function ProjectModal({ open, onClose, project }) {
         </div>
 
         {/* Content */}
-        <div className="p-4 sm:p-6 flex-1 ">
+        <div className="p-4 sm:p-6 flex-1 overflow-y-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_.7fr] gap-6">
             <div>
               <h3 className="font-heading text-xl sm:text-2xl font-semibold">{project.title}</h3>
