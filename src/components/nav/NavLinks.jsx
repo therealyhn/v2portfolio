@@ -46,7 +46,7 @@ export default function NavLinks({ onClick }) {
       {/* CV download ostaje <a> */}
       <li onClick={onClick}>
         <a
-          href="/Jovan_Ljusic_CV_eng.pdf"
+          href="/JovanLjusicCV.pdf"
           download
           className="group relative px-1 py-2 hover:text-black dark:hover:text-white transition"
         >
