@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from "react";
 import useScrollLock from "../../hooks/useScrollLock";
-import { urlFor } from "../../lib/sanityImage";
 
 function IconExternal({ className = "w-4 h-4" }) {
   return (
@@ -77,14 +76,7 @@ export default function ProjectModal({ open, onClose, project }) {
               {slides.map((img, i) => (
                 <div key={i} className="w-full shrink-0">
                   <img
-                    src={urlFor(img).width(1600).height(900).fit("max").auto("format").url()}
-                    srcSet={[
-                      urlFor(img).width(800).height(450).fit("max").auto("format").url() + " 800w",
-                      urlFor(img).width(1200).height(675).fit("max").auto("format").url() + " 1200w",
-                      urlFor(img).width(1600).height(900).fit("max").auto("format").url() + " 1600w",
-                      urlFor(img).width(2000).height(1125).fit("max").auto("format").url() + " 2000w",
-                    ].join(", ")}
-                    sizes="(min-width: 1024px) 70vw, 100vw"
+                    src={img}
                     alt=""
                     className="w-full h-[200px] sm:h-[450px] object-cover select-none"
                     draggable="false"

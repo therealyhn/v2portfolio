@@ -1,5 +1,4 @@
 import Tag from "./Tag";
-import { urlFor } from "../../lib/sanityImage";
 
 function IconExternal({ className = "w-4 h-4" }) {
     return (
@@ -32,13 +31,7 @@ export default function ProjectCard({ project, onOpen }) {
             >
                 {project.coverImage ? (
                     <img
-                        src={urlFor(project.coverImage).width(720).height(480).fit("crop").auto("format").url()}
-                        srcSet={[
-                            urlFor(project.coverImage).width(480).height(320).fit("crop").auto("format").url() + " 480w",
-                            urlFor(project.coverImage).width(720).height(480).fit("crop").auto("format").url() + " 720w",
-                            urlFor(project.coverImage).width(960).height(640).fit("crop").auto("format").url() + " 960w",
-                        ].join(", ")}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        src={project.coverImage}
                         alt={project.title}
                         loading="lazy"
                         decoding="async"
